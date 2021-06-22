@@ -29,7 +29,7 @@
 #define NR 2
 
 /*!
- * Scene zawiera łącze do gnuplota, listę dronów, listę przeszkód, ich iteratory, płaszczyznę. 
+ * Scene zawiera liczniki poszczególnych przeszkód, łącze do gnuplota, listę dronów, listę przeszkód, ich iteratory, płaszczyznę. 
  */
 class Scene {
 int ridgeamount=0, flatamount=0, peakamount=0;

@@ -13,8 +13,8 @@
 #include "obstacles.hh"
 
 /*!
- * Ridge dziedziczy po klasie Solid
- * zawiera dodatkowe pola: środek podstawy i typ.
+ * Ridge dziedziczy po klasie Solid i Obstacles
+ * zawiera tylko zmienne z klas rodziców
  */
 class Ridge: public Solid, public Obstacles{
 
@@ -34,9 +34,13 @@ Ridge(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dime
 * Metoda dostępowa, zwraca typ obiektu
 */
 virtual std::string gettype() override {return type;}
-
+/*! 
+* Metoda dostępowa, zwraca środek obiektu
+*/
 virtual Vector3D getmid() /*const*/ override {return mid;}
-
+/*! 
+* Metoda dostępowa, zwraca nazwę obiektu
+*/
 virtual std::string getname() override {return name;}
 
 };

@@ -10,11 +10,10 @@
 /*! 
 * Konstruktor parametryczny klasy Flat.      
 * \param[in]  - mid -środek bryły, 
-* \param[in]  - x -wspólrzędna po osi x, 
-* \param[in]  - y -wspólrzędna po osi y,
-* \param[in]  - z -wspólrzędna po osi z,
-* \param[in]  - name -nazwa,
-* wpisuje do kontenera wszystkie wierzchołki płaskowyżu
+* \param[in]  - nr - numer bryły
+* \param[in]  - Lacze - łącze do gnuplota
+* \param[in]  - dimen - wektor wymiarów
+* wpisuje do kontenera wszystkie wierzchołki płaskowyżu, dodaje nazwę pliku do gnuplota
 */
 Flat::Flat(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];

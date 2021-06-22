@@ -19,7 +19,7 @@
 /*!
  * Drone zawiera: kąt, id, odległość do przebycia, macierz rotacji 
  * oryginalne rotory, ich kopie, oryginalny kadłub, jego kopię,
- *łącze do gnu plota i rysowaną scieżkę. 
+ * i rysowaną scieżkę. 
  */
 class Drone: public Solid, public Obstacles /* :public Obstacles*/{
 
@@ -74,5 +74,5 @@ Drone();
 /*! 
 * Metoda dostępowa, zwraca typ obiektu
 */
-virtual std::string gettype() override {return type;}
+    virtual std::string gettype() override {return type;}
 };

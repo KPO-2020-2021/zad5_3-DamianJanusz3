@@ -14,8 +14,7 @@
 
 
 /*!
- * Obstacles zawiera: numer obiektu, łącze do gnuplota, 3 liczniki dla poszczególnych 
- * przeszkód, 3 zmienne reprezentujące różne typy przeszkód
+ * Obstacles zawiera:  łącze do gnuplota, 
  */
 class Obstacles { 
 public:
@@ -34,6 +33,9 @@ public:
 
 //virtual std::string getname() {return name;}
 
+/*! 
+* Konstruktor parametryczny klasy Obstacles
+*/
 Obstacles(PzG::LaczeDoGNUPlota  &Lacze):Lacze(Lacze) { };
 
 

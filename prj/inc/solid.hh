@@ -19,14 +19,13 @@
 
 
 /*!
- * Solid zawiera kontener na wierzchołki, wektor środka bryły, nazwę,
- * oraz wymiary.
+ * Solid zawiera kontener na wierzchołki, wektor środka bryły, nazwę, typ,
+ * nr bryły oraz wymiary.
  */
 class Solid {
 
 protected:
 int nr=0;
-//PzG::LaczeDoGNUPlota  &Lacze;
 Vector3D mid;
 std:: string name;
 std::vector<Vector3D> vert;
@@ -36,6 +35,9 @@ std::string type="obiekt niezidentyfikowany";
 public:
 //Solid();
 
+/*! 
+* Metoda dostępowa, zwraca typ
+*/
 virtual std::string gettype() {return type;}
 /*! 
 * Operator indeksowania

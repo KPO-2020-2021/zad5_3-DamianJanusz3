@@ -51,10 +51,10 @@ Vector3D a2(place3); Vector3D d2(wym3);
 Vector3D a3(place4); Vector3D d3(wym4);
 Vector3D a4(place5); Vector3D d4(wym5);
 
-Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,d,a)); ++ridgeamount;
-Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,d2,a2)); ++flatamount;
-Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,d3,a3)); ++peakamount;
-Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,d4,a4)); ++peakamount;
+Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,a,d)); ++ridgeamount;
+Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,a2,d2)); ++flatamount;
+Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a3,d3)); ++peakamount;
+Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a4,d4)); ++peakamount;
 //for (std::shared_ptr<Solid> &ob1 : Lst) {
 //    Lacze.DodajNazwePliku(ob1->getname().c_str(),PzG::RR_Ciagly, 2);
 //    ob1->save();}
@@ -148,9 +148,9 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         
 
         
-        if(num==1){Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,dimens,a)); ++ridgeamount;}
-        else if(num==2){Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,dimens,a)); ++flatamount;}
-        else if(num==3){Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,dimens,a)); ++peakamount;}
+        if(num==1){Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,a,dimens)); ++ridgeamount;}
+        else if(num==2){Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,a,dimens)); ++flatamount;}
+        else if(num==3){Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a,dimens)); ++peakamount;}
         else {std::cerr<<"Nie ma bryły o takim numerze"<<std::endl;}
 
         //for (std::shared_ptr<Solid> &ob2 : Lst) {
@@ -164,11 +164,9 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         std::cout<<"Wybierz element powierzchni do usuniecia:"<<std::endl;
         
         for (std::shared_ptr<Solid> &ob : Lst) {
-            std::cout<<"test2"<<std::endl;
+            
             //if (ob->gettype()!="Dron"){
-                std::cout<<"test"<<std::endl;
             midd=ob->getmid();
-             std::cout<<midd<<std::endl;
             std::cout<<n<<" - ("<<midd[0]<<" "<<midd[1]<<") "<<ob->gettype()<<std::endl;
             
             ++n;

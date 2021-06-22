@@ -10,11 +10,10 @@
 /*! 
 * Konstruktor parametryczny klasy Peak.      
 * \param[in]  - mid -środek bryły, 
-* \param[in]  - x -wspólrzędna po osi x, 
-* \param[in]  - y -wspólrzędna po osi y,
-* \param[in]  - z -wspólrzędna po osi z,
-* \param[in]  - name -nazwa,
-* wpisuje do kontenera wszystkie wierzchołki góry ze szczytem
+* \param[in]  - nr - numer bryły
+* \param[in]  - Lacze - łącze do gnuplota
+* \param[in]  - dimen - wektor wymiarów
+* wpisuje do kontenera wszystkie wierzchołki góry ze szczytem, dodaje nazwę pliku do gnuplota 
 */
 Peak::Peak(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
