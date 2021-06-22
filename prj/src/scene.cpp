@@ -36,8 +36,11 @@ for (std::shared_ptr<Drone> &obd : DLst) {
 }
 //
 
-//Lst.push_back(std::make_shared<Obstacles>(0,Lacze,Vector3D(position)));
-//Lst.push_back(std::make_shared<Obstacles>(1,Lacze,Vector3D(position2)));//????????????????????
+Lst.push_back(std::make_shared<Drone>(0,Lacze,Vector3D(position)));
+Lst.push_back(std::make_shared<Drone>(1,Lacze,Vector3D(position2)));//????????????????????
+//for (std::shared_ptr<Solid> &obd1 : Lst) {
+//    obd1->save();
+//}
 
 
 /////////////////
@@ -165,13 +168,13 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         
         for (std::shared_ptr<Solid> &ob : Lst) {
             
-            //if (ob->gettype()!="Dron"){
+            if (ob->gettype()!="Dron"){
             midd=ob->getmid();
             std::cout<<n<<" - ("<<midd[0]<<" "<<midd[1]<<") "<<ob->gettype()<<std::endl;
             
             ++n;
-            //}
-            //else {;}
+            }
+            else {;}
         }
         iter = Lst.begin();
         std::cout<<"Podaj numer elementu> ";
@@ -179,7 +182,7 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         
         if (m<n && m>0) {
             
-            advance(iter, m-1);////+1
+            advance(iter, m+1);////-1
             Lst.erase(iter);
         }
         else {std::cerr<<"nie ma przeszkody o tym numerze"<<std::endl;}

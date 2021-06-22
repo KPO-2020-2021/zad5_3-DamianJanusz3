@@ -16,15 +16,17 @@
 #include <fstream>
 #include <vector>
 //#include "../inc/lacze_do_gnuplota.hh"
+///#include "scene.hh"
 
 
 /*!
  * Solid zawiera kontener na wierzchołki, wektor środka bryły, nazwę, typ,
- * nr bryły oraz wymiary.
+ * nr bryły, promień obrsysu oraz wymiary.
  */
 class Solid {
 
 protected:
+double oradius=0;
 int nr=0;
 Vector3D mid;
 std:: string name;
@@ -33,8 +35,15 @@ Vector3D dimen;
 std::string type="obiekt niezidentyfikowany";
 
 public:
+//bool canland(  Scene &Scn );
 //Solid();
 
+
+bool istherecolision(double rad, Vector3D midb);
+/*! 
+* Metoda dostępowa, zwraca promień obrysu
+*/
+virtual double getoradius() {return oradius;}
 /*! 
 * Metoda dostępowa, zwraca typ
 */

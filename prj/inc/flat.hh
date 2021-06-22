@@ -41,5 +41,8 @@ virtual Vector3D getmid() /*const*/ override {return mid;}
 * Metoda dostępowa, zwraca nazwę obiektu
 */
 virtual std::string getname() override {return name;}
-
+/*! 
+* Metoda dostępowa, zwraca promień obrysu
+*/
+virtual double getoradius() override{return oradius;}
 };

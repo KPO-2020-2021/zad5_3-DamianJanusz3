@@ -13,6 +13,7 @@
 #include "prism.hh"
 #include <unistd.h>
 #include "vector3D.hh"
+#include "scene.hh"
 //#include "../inc/lacze_do_gnuplota.hh"
 
 
@@ -75,4 +76,6 @@ Drone();
 * Metoda dostępowa, zwraca typ obiektu
 */
     virtual std::string gettype() override {return type;}
+
+    bool canland(  Scene &Scn );
 };

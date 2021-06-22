@@ -13,6 +13,7 @@
 
 
 
+
 /*!
  * Obstacles zawiera:  łącze do gnuplota, 
  */
@@ -37,6 +38,8 @@ public:
 * Konstruktor parametryczny klasy Obstacles
 */
 Obstacles(PzG::LaczeDoGNUPlota  &Lacze):Lacze(Lacze) { };
+
+ 
 
 
 

@@ -6,6 +6,7 @@
  */
 
 #include "ridge.hh"
+#include <algorithm>
 
 /*! 
 * Konstruktor parametryczny klasy Ridge.      
@@ -17,6 +18,8 @@
 */
 Ridge::Ridge(PzG::LaczeDoGNUPlota  &Lacze, int nr,Vector3D mid,Vector3D dimenn /*double x, double y, double z, std::string name*/):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
+this->oradius=std::max(x,y)+20;
+
     double tab[]={x,y,z};
     
     double tab3[]={x/2,0,0};

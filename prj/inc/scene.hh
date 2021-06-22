@@ -62,4 +62,7 @@ void interface();
 * Metoda odpowiedzialna za usunięcie nazwy pliku z łącza 
 */
 void deletename ( PzG::LaczeDoGNUPlota  &Lacze);
+
+std::list<std::shared_ptr<Solid>> getLst() const {return Lst;}
+
 };

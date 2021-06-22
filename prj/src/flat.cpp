@@ -6,6 +6,7 @@
  */
 
 #include "flat.hh" 
+#include <algorithm>
 
 /*! 
 * Konstruktor parametryczny klasy Flat.      
@@ -17,6 +18,8 @@
 */
 Flat::Flat(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
+this->oradius=std::max(x,y)+20;
+
     double tab[]={x,y,z};
     
     dimen=Vector3D(tab);

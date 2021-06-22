@@ -13,7 +13,7 @@
 * \param[in]  - position -wektor określający położenie drona,             
 * Ustawia nazwy plików, dodaje je do gnuplota   
 */
-Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze)/*:Lacze(Lacze)*/{
+Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze)/*:Lacze(Lacze)*/{ 
 
 angle=0;
 this->id=id;
@@ -37,6 +37,7 @@ for (int l = 0; l < 4; l++) {
     this->path = this->path + position;
     this->mid = org.getmid();
 this->type="Dron";
+this->save();
 }
 
 /*! 
@@ -149,6 +150,7 @@ void Drone::manipulate () {
 
     double path;
     double angle;
+    Scene sc1;
     
         
     save();
@@ -206,11 +208,13 @@ void Drone::manipulate () {
         usleep(20000);
         }
 
+    if (canland(sc1)==true) {
         for (int o = 0; o < 100; o++)
         {
         cpy = org;
         for (int p = 0; p < 4; p++)
            cpyw[p] = orgw[p];
+           
         verticalmove(-1);
         rotatew();
         save();
@@ -218,6 +222,36 @@ void Drone::manipulate () {
         usleep(20000);
         }
         Lacze.UsunOstatniaNazwe();
+    }
+    else if (canland(sc1)==false) {
+        path=path+50;
+        for (int k = 0; k < path; k++)
+        {
+        cpy = org;
+        for (int l = 0; l < 4; l++)
+            cpyw[l] = orgw[l];
+        move(1);
+        rotatew();
+        save();
+        Lacze.Rysuj();
+        usleep(20000);
+        }
+
+
+        for (int o = 0; o < 100; o++)
+        {
+        cpy = org;
+        for (int p = 0; p < 4; p++)
+           cpyw[p] = orgw[p];
+           
+        verticalmove(-1);
+        rotatew();
+        save();
+        Lacze.Rysuj();
+        usleep(20000);
+        }
+        Lacze.UsunOstatniaNazwe();
+    }
 
 
 }
@@ -251,4 +285,15 @@ void Drone::calculatepath(double path, double angle1) {
     }
     file.close();
 
+    }
+
+
+
+    bool Drone::canland(  Scene &Scn )  {
+
+        for ( std::shared_ptr<Solid> &obg: Scn.getLst()) {
+            if ((Solid*)&obg == this) {continue;}
+            if (obg->istherecolision(getoradius(),getmid())==false) {std::cout<<"można lądować"<<std::endl; return true;}
+            else if (obg->istherecolision(getoradius(),getmid())==true) {std::cout<<"nie można lądować"<<std::endl;return false;}
+        }
     }

@@ -10,6 +10,7 @@
 
 
 
+
 //Solid::Solid():Lacze(Lacze) {Vector3D tmp; nr=0; mid=tmp; name=" "; dimen=tmp; type="obiekt niezidentyfikowany";}
  /*! 
 * Operator indeksowania klasy Solid. 
@@ -121,4 +122,12 @@ mid=rot*mid;
      }
      file << mid-movemid <<std::endl <<std::endl;
      file.close();
+ }
+
+
+
+
+ bool Solid::istherecolision(double rad, Vector3D midb) {
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
  }
