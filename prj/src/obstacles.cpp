@@ -8,7 +8,7 @@
 #include "obstacles.hh"
 
 
-
+//Obstacles::Obstacles(PzG::LaczeDoGNUPlota  &Lacze):Lacze(Lacze) { }
 
 
 

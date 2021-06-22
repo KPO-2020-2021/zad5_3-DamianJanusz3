@@ -9,7 +9,7 @@ set(TESTFILES        # All .cpp files in tests/
     #solid.cpp
     surface.cpp
     cuboid.cpp
-    ridge.cpp
+    #ridge.cpp
 )
 
 set(TEST_MAIN unit_tests)   # Default name for test executable (change if you wish).

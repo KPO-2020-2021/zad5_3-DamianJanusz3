@@ -16,7 +16,7 @@
 * \param[in]  - name -nazwa,
 * wpisuje do kontenera wszystkie wierzchołki góry z granią
 */
-Ridge::Ridge(/*PzG::LaczeDoGNUPlota  &Lacze,*/ int nr,Vector3D mid,Vector3D dimenn /*double x, double y, double z, std::string name*/) { 
+Ridge::Ridge(PzG::LaczeDoGNUPlota  &Lacze, int nr,Vector3D mid,Vector3D dimenn /*double x, double y, double z, std::string name*/):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
     double tab[]={x,y,z};
     
@@ -70,8 +70,8 @@ double x=dimenn[0], y=dimenn[1], z=dimenn[2];
 
     this->mid=mid+mov2;
 
-    //Lacze.DodajNazwePliku(this->getname().c_str(), PzG::RR_Ciagly, 2);
-    //this->save();
+    Lacze.DodajNazwePliku(this->getname().c_str(), PzG::RR_Ciagly, 2);
+    this->save();
 }
 
 

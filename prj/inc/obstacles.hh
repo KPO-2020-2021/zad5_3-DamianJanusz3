@@ -34,7 +34,7 @@ public:
 
 //virtual std::string getname() {return name;}
 
-Obstacles();
+Obstacles(PzG::LaczeDoGNUPlota  &Lacze):Lacze(Lacze) { };
 
 
 

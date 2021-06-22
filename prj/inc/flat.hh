@@ -27,7 +27,7 @@ public:
 /*! 
 * Konstruktor parametryczny klasy Flat
 */
-Flat(int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D());  
+Flat(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D());  
 
 /*! 
 * Metoda dostępowa, zwraca typ obiektu

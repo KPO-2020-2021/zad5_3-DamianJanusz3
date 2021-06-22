@@ -13,7 +13,7 @@
 * \param[in]  - position -wektor określający położenie drona,             
 * Ustawia nazwy plików, dodaje je do gnuplota   
 */
-Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position)/*:Lacze(Lacze)*/{
+Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze)/*:Lacze(Lacze)*/{
 
 angle=0;
 this->id=id;

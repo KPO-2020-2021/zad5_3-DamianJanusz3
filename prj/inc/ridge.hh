@@ -28,7 +28,7 @@ public:
 /*! 
 * Konstruktor parametryczny klasy Ridge
 */
-Ridge(/*PzG::LaczeDoGNUPlota  &Lacze ,*/int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D()/*double x=100, double y=100, double z=100*/);  
+Ridge(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D()/*double x=100, double y=100, double z=100*/);  
 
 /*! 
 * Metoda dostępowa, zwraca typ obiektu

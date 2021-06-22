@@ -28,7 +28,7 @@ public:
 /*! 
 * Konstruktor parametryczny klasy Peak 
 */
-Peak(int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D());           
+Peak(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D());           
 
 
 /*! 

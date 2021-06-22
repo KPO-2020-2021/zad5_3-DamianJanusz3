@@ -16,7 +16,7 @@
 * \param[in]  - name -nazwa,
 * wpisuje do kontenera wszystkie wierzchołki góry ze szczytem
 */
-Peak::Peak(int nr,Vector3D mid,Vector3D dimenn) { 
+Peak::Peak(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
     double tab[]={x,y,z};
     

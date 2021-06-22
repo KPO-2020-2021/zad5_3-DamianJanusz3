@@ -16,7 +16,7 @@
 * \param[in]  - name -nazwa,
 * wpisuje do kontenera wszystkie wierzchołki płaskowyżu
 */
-Flat::Flat(int nr,Vector3D mid,Vector3D dimenn) { 
+Flat::Flat(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
     double tab[]={x,y,z};
     

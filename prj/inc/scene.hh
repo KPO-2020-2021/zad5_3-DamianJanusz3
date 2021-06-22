@@ -16,13 +16,13 @@
 #include <list>
 
 //#include "obstacles.hh"
-#include "solid.hh"/////?????????????
+//#include "solid.hh"/////?????????????
 #include "ridge.hh"
 #include "flat.hh"
 #include "peak.hh"
 #include "example.h"
 #include "lacze_do_gnuplota.hh"
-#include "prism.hh"
+//#include "prism.hh"
 #include "drone.hh"
 #include "surface.hh"
 
