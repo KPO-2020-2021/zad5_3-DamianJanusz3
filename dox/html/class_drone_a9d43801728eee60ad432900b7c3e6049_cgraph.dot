@@ -1,0 +1,14 @@
+digraph "Drone::rotate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drone::rotate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Matrix::make3DZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_matrix.html#af5a2c629a4ded5bb85c56c0908188560",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Solid::move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html#a3b39581af29120802943a28a5a70bab5",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Solid::translate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html#a95e4946e09386494a9af560bd9d8feb2",tooltip=" "];
+}

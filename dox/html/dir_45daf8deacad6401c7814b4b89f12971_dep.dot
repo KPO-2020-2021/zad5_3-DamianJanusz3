@@ -1,0 +1,15 @@
+digraph "doctest" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d2cf801fee525a488c22d5fd8c24fffb {
+    graph [ bgcolor="#ddddee", pencolor="black", label="tests" fontname="Helvetica", fontsize="10", URL="dir_d2cf801fee525a488c22d5fd8c24fffb.html"]
+  subgraph clusterdir_45daf8deacad6401c7814b4b89f12971 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_45daf8deacad6401c7814b4b89f12971.html"];
+    dir_45daf8deacad6401c7814b4b89f12971 [shape=plaintext label="doctest"];
+    dir_aedb546d2c3de49f975232071078c84c [shape=box label="extensions" color="red" fillcolor="white" style="filled" URL="dir_aedb546d2c3de49f975232071078c84c.html"];
+    dir_d07a574df0ce0285a7ad3d1085362bfe [shape=box label="parts" color="black" fillcolor="white" style="filled" URL="dir_d07a574df0ce0285a7ad3d1085362bfe.html"];
+    dir_000f62811a931753ccfd3d56e8ea60e0 [shape=box label="translation.pyi" color="red" fillcolor="white" style="filled" URL="dir_000f62811a931753ccfd3d56e8ea60e0.html"];
+  }
+  }
+}

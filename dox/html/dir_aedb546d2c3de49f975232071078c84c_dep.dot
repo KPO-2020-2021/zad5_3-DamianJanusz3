@@ -1,0 +1,13 @@
+digraph "extensions" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_45daf8deacad6401c7814b4b89f12971 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="doctest" fontname="Helvetica", fontsize="10", URL="dir_45daf8deacad6401c7814b4b89f12971.html"]
+  subgraph clusterdir_aedb546d2c3de49f975232071078c84c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_aedb546d2c3de49f975232071078c84c.html"];
+    dir_aedb546d2c3de49f975232071078c84c [shape=plaintext label="extensions"];
+    dir_539d47b25c0dce14d5c6789ef72c74bb [shape=box label="synchronize.pyi" color="black" fillcolor="white" style="filled" URL="dir_539d47b25c0dce14d5c6789ef72c74bb.html"];
+  }
+  }
+}

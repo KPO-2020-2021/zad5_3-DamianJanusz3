@@ -1,0 +1,18 @@
+digraph "Obstacles::Obstacles"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Obstacles::Obstacles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PzG::LaczeDoGNUPlota\l::DodajNazwePliku",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f",tooltip="Dodaje nazwę pliku."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PzG::CzyJestPlik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Solid::getname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html#a841f254903ac1f73a0f473d820621dcf",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Solid::save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html#ab34e84803e8397bc408fc1b3f9ab3a01",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Solid::setname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html#afc2db717aa74a8bb8813b07655c1f2b7",tooltip=" "];
+}

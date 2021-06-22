@@ -1,0 +1,23 @@
+digraph "Obstacles"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Obstacles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Lacze" ,fontname="Helvetica"];
+  Node2 [label="PzG::LaczeDoGNUPlota",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pz_g_1_1_lacze_do_g_n_u_plota.html",tooltip="Klasa realizuje interfejs do programu GNUPlot."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fla2" ,fontname="Helvetica"];
+  Node3 [label="Flat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_flat.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Solid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mid\ndimen" ,fontname="Helvetica"];
+  Node5 [label="Vector\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="Helvetica"];
+  Node6 [label="Vector\< type, size1 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector.html",tooltip=" "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rid2" ,fontname="Helvetica"];
+  Node7 [label="Ridge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ridge.html",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pea2" ,fontname="Helvetica"];
+  Node8 [label="Peak",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_peak.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
