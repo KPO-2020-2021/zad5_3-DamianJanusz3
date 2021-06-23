@@ -146,11 +146,11 @@ void Drone::save() {
 * \param[in]  - brak,                
 * Wykonuje wszystkie akcje dronami.
 */
-void Drone::manipulate () {
+/*void Drone::manipulate () {
 
     double path;
     double angle;
-    Scene sc1;
+    //Scene sc1;
     
         
     save();
@@ -208,7 +208,7 @@ void Drone::manipulate () {
         usleep(20000);
         }
 
-    if (canland(sc1)==true) {
+    //if (canland(sc1)==true) {
         for (int o = 0; o < 100; o++)
         {
         cpy = org;
@@ -222,8 +222,8 @@ void Drone::manipulate () {
         usleep(20000);
         }
         Lacze.UsunOstatniaNazwe();
-    }
-    else if (canland(sc1)==false) {
+    //}*/
+    /*else if (canland(sc1)==false) {
         path=path+50;
         for (int k = 0; k < path; k++)
         {
@@ -251,10 +251,10 @@ void Drone::manipulate () {
         usleep(20000);
         }
         Lacze.UsunOstatniaNazwe();
-    }
+    }*/
 
 
-}
+//}
 
 /*! 
 * Metoda odpowiedzialna za wyznaczenie trasy. 
@@ -289,11 +289,11 @@ void Drone::calculatepath(double path, double angle1) {
 
 
 
-    bool Drone::canland(  Scene &Scn )  {
+   /* bool Drone::canland(  Scene &Scn )  {
 
         for ( std::shared_ptr<Solid> &obg: Scn.getLst()) {
             if ((Solid*)&obg == this) {continue;}
             if (obg->istherecolision(getoradius(),getmid())==false) {std::cout<<"można lądować"<<std::endl; return true;}
             else if (obg->istherecolision(getoradius(),getmid())==true) {std::cout<<"nie można lądować"<<std::endl;return false;}
         }
-    }
+    }*/

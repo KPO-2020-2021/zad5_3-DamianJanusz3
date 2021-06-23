@@ -128,8 +128,8 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         case 'p':
         
 
-        if (r==0) {it=DLst.begin(); it->get()->manipulate();}
-        else if (r==1) { it=DLst.begin(); (++it)->get()->manipulate(); it=DLst.begin();} //////tu nie moge zmienić to może potem zawsze po 
+        if (r==0) {it=DLst.begin();/* it->get()->*/manipulate1(it->get());}
+        else if (r==1) { it=DLst.begin();++it;/* (++it)->get()->*/manipulate1(it->get()); it=DLst.begin();} //////tu nie moge zmienić to może potem zawsze po 
         else {std::cerr<<"brak drona o podanym numerze."<<std::endl; r=0;}                  //wylądowaniu stawiać nowe drony na liście
         
         break;
@@ -257,4 +257,83 @@ free (ground);
          Lacze.DodajNazwePliku(ob2->getname().c_str(), PzG::RR_Ciagly, 2);
      }
 
+ }
+
+
+
+
+ void Scene::manipulate1(Drone *tmp){
+
+    double path;
+    double angle;
+
+    tmp->save();
+    std::cout<<"Podaj kierunek lotu (kat w stopniach)>";
+    std::cin>> angle;
+    std::cout<<"Podaj dlugosc lotu>";
+    std::cin >> path;
+    tmp->calculatepath(path,angle);
+    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::RR_Ciagly, 2);
+    for (int i=0; i<100; ++i){
+            tmp->cpy=tmp->org;
+            for (int j = 0; j < 4; j++)
+            tmp->cpyw[j]=tmp->orgw[j];
+
+            tmp->verticalmove(1);
+            tmp->rotatew();
+            tmp->save();
+            Lacze.Rysuj();
+            usleep(20000);
+        }
+      if(angle>0){
+        for (int i=0; i<angle; ++i){
+            tmp->cpy=tmp->org;
+            for (int j = 0; j < 4; j++)
+                tmp->cpyw[j] = tmp->orgw[j];
+            tmp->rotate(1);
+            tmp->rotatew();
+            tmp->save();
+            Lacze.Rysuj();
+            usleep(20000);
+        }
+        }
+        else {
+            for (int k=0; k>angle; --k){
+            tmp->cpy=tmp->org;
+            for (int j = 0; j < 4; j++)
+                tmp->cpyw[j] = tmp->orgw[j];
+            tmp->rotate(-1);
+            tmp->rotatew();
+            tmp->save();
+            Lacze.Rysuj();
+            usleep(20000);
+        }
+        }
+    
+    for (int k = 0; k < path; k++)
+        {
+        tmp->cpy = tmp->org;
+        for (int l = 0; l < 4; l++)
+            tmp->cpyw[l] = tmp->orgw[l];
+        tmp->move(1);
+        tmp->rotatew();
+        tmp->save();
+        Lacze.Rysuj();
+        usleep(20000);
+        }
+
+    //if (canland(sc1)==true) {
+        for (int o = 0; o < 100; o++)
+        {
+        tmp->cpy = tmp->org;
+        for (int p = 0; p < 4; p++)
+           tmp->cpyw[p] = tmp->orgw[p];
+           
+        tmp->verticalmove(-1);
+        tmp->rotatew();
+        tmp->save();
+        Lacze.Rysuj();
+        usleep(20000);
+        }
+        Lacze.UsunOstatniaNazwe();
  }

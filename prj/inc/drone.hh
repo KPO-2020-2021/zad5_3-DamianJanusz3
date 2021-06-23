@@ -13,7 +13,7 @@
 #include "prism.hh"
 #include <unistd.h>
 #include "vector3D.hh"
-#include "scene.hh"
+//#include "scene.hh"
 //#include "../inc/lacze_do_gnuplota.hh"
 
 
@@ -23,7 +23,7 @@
  * i rysowaną scieżkę. 
  */
 class Drone: public Solid, public Obstacles /* :public Obstacles*/{
-
+public:
     int id;
     double angle;
     std::vector <Vector3D> pathr;
@@ -38,7 +38,7 @@ class Drone: public Solid, public Obstacles /* :public Obstacles*/{
     //std::string type="Dron";
     
 
-    public:
+    
 Drone();
 /*! 
 * Konstruktor parametryczny klasy Surface
@@ -51,7 +51,7 @@ Drone();
 /*! 
 * Metoda odpowiedzialna za sterowanie dronem
 */
-    void manipulate();
+    //void manipulate();
 /*! 
 * Metoda odpowiedzialna za przesunięcie drona
 */
@@ -77,5 +77,5 @@ Drone();
 */
     virtual std::string gettype() override {return type;}
 
-    bool canland(  Scene &Scn );
+   // bool canland(  Scene &Scn );
 };
