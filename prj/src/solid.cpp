@@ -80,6 +80,8 @@ for (int i=0; i<(int)vert.size(); ++i) {
     vert[i]=vert[i]+mov;
 }
 mid=mid+mov;
+
+//bmid=bmid+mov;
 }
 
 /*! 
@@ -93,6 +95,8 @@ for (int i=0; i<(int)vert.size(); ++i) {
     vert[i]=(rot*vert[i]);
 }
 mid=rot*mid;
+
+//bmid=rot*mid;
 }
 
 /*! 
@@ -127,7 +131,7 @@ mid=rot*mid;
 
 
 
- bool Solid::istherecolision(double rad, Vector3D midb) {
+ /* bool Solid::istherecolision(double rad, Vector3D midb) {
      if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
      else {return false;}
- }
+ }*/

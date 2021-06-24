@@ -45,4 +45,9 @@ virtual std::string getname() override {return name;}
 * Metoda dostępowa, zwraca promień obrysu
 */
 virtual double getoradius() override{return oradius;}
+
+virtual bool istherecolision(double rad, Vector3D midb) override{
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
+ }
 };

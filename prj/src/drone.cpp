@@ -13,10 +13,11 @@
 * \param[in]  - position -wektor określający położenie drona,             
 * Ustawia nazwy plików, dodaje je do gnuplota   
 */
-Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze)/*:Lacze(Lacze)*/{ 
+Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze){ 
 
 angle=0;
 this->id=id;
+this->oradius=50;
 org.setname("../datasets/body"+std::to_string(id)+".dat");
 
  for (int i = 0; i < 4; ++i)
@@ -28,6 +29,7 @@ Lacze.DodajNazwePliku(orgw[j].getname().c_str(),PzG::RR_Ciagly,2);
 cpy=org;
 
 cpy.move(position);
+this->bmid=cpy.getmid();
 for (int k=0; k<4; ++k) {
     cpyw[k]=orgw[k];
 }
@@ -35,7 +37,7 @@ for (int l = 0; l < 4; l++) {
         cpyw[l].move(org[l*2] + position);
 }
     this->path = this->path + position;
-    this->mid = org.getmid();
+    this->mid =position;
 this->type="Dron";
 this->save();
 }
@@ -72,7 +74,7 @@ void Drone::move(double path) {
 
 /*! 
 * Metoda odpowiedzialna za rotację drona. 
-* \param[in]  - angle -kąt obrotu,                
+* \param[in]  - angle -kąt obrotu,
 * Obraca dronem o zadany kąt  
 */
 void Drone::rotate(double angle) {
@@ -91,7 +93,7 @@ void Drone::rotate(double angle) {
 * Obraca rotorami wokół ich środka i przesuwa 
 * te rotory na swoje miejsca
 */
-void Drone::rotatew(/*double angle*/) {
+void Drone::rotatew() {
 
     static int angle1=0;
     static int angle2=0;
@@ -264,13 +266,15 @@ void Drone::save() {
 */
 void Drone::calculatepath(double path, double angle1) {
 
+this->angler=this->angler+angle1;
+
     Vector3D next = cpy.getmid();
     next[2] = 0;
     pathr.push_back(next);
     next[2] = 100;
     pathr.push_back(next);
-    next[0] += path * cos(angle1 * M_PI / 180);
-    next[1] += path * sin(angle1 * M_PI / 180);
+    next[0] += path * cos(angler * M_PI / 180);
+    next[1] += path * sin(angler * M_PI / 180);
     pathr.push_back(next);
     next[2] = 0;
     pathr.push_back(next);
@@ -297,3 +301,12 @@ void Drone::calculatepath(double path, double angle1) {
             else if (obg->istherecolision(getoradius(),getmid())==true) {std::cout<<"nie można lądować"<<std::endl;return false;}
         }
     }*/
+
+
+
+
+    /* bool Solid::istherecolision(double rad, Vector3D midb) {
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
+     
+ }*/

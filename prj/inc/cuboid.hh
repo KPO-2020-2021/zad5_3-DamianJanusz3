@@ -15,7 +15,7 @@
  */
 class Cuboid: public Solid {
    // Vector3D mid;
-   // std::string name;
+   // std::string name; 
 
 
    

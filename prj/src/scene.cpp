@@ -27,8 +27,8 @@ Lacze.DodajNazwePliku(ground->getname().c_str(),PzG::RR_Ciagly, 2);
 ground->save();
 
 
-double position[3]{(double)(rand()%510-200),(double)(rand()%510-200),30};
-double position2[3]{(double)(rand()%510-200),(double)(rand()%510-200),30};
+double position[3]{-300,50,30};
+double position2[3]{50,50,30};
 DLst.push_back(std::make_shared<Drone>(0,Lacze,Vector3D(position)));
 DLst.push_back(std::make_shared<Drone>(1,Lacze,Vector3D(position2)));
 for (std::shared_ptr<Drone> &obd : DLst) {
@@ -37,16 +37,15 @@ for (std::shared_ptr<Drone> &obd : DLst) {
 //
 
 Lst.push_back(std::make_shared<Drone>(0,Lacze,Vector3D(position)));
-Lst.push_back(std::make_shared<Drone>(1,Lacze,Vector3D(position2)));//????????????????????
-//for (std::shared_ptr<Solid> &obd1 : Lst) {
-//    obd1->save();
-//}
+Lst.push_back(std::make_shared<Drone>(1,Lacze,Vector3D(position2)));
+
+//
 
 
 /////////////////
-double x=100, y=100, z=100, k=50, l=50, i=-150, j=-250, zz=40, g=-300, h=200, m=50, n=-250;//, nr=1;
-double place2[3]{k,l,z/2}; double wym2[3]{x,y,z}; 
-double place3[3]{i,j,zz/2}; double wym3[3]{x,y,zz};
+double x=100, y=100, z=100, k=-150, l=50, i=-150, j=-250, zz=40, g=-300, h=200, m=50, n=-250;//, nr=1;
+double place2[3]{k,l,zz/2}; double wym2[3]{x,y,zz}; 
+double place3[3]{i,j,z/2}; double wym3[3]{x,y,z};
 double place4[3]{g,h,zz/2}; double wym4[3]{x,y,zz};
 double place5[3]{m,n,z/2}; double wym5[3]{x,y,z}; 
 Vector3D a(place2);Vector3D d(wym2);
@@ -54,13 +53,10 @@ Vector3D a2(place3); Vector3D d2(wym3);
 Vector3D a3(place4); Vector3D d3(wym4);
 Vector3D a4(place5); Vector3D d4(wym5);
 
-Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,a,d)); ++ridgeamount;
-Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,a2,d2)); ++flatamount;
+Lst.push_back(std::make_shared<Ridge>(Lacze,ridgeamount,a2,d2)); ++ridgeamount;
+Lst.push_back(std::make_shared<Flat>(Lacze,flatamount,a,d)); ++flatamount;
 Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a3,d3)); ++peakamount;
 Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a4,d4)); ++peakamount;
-//for (std::shared_ptr<Solid> &ob1 : Lst) {
-//    Lacze.DodajNazwePliku(ob1->getname().c_str(),PzG::RR_Ciagly, 2);
-//    ob1->save();}
 ///////////////////
 
 Lacze.Rysuj(); 
@@ -96,7 +92,7 @@ std::cout<<"m - wyswietl menu"<<std::endl<<std::endl;
 std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
 
     char action;
-    int r=0,num=0, /*nextr=1,nextf=1,nextp=2,*/ n=1, m=0;
+    int r=0,num=0, n=1, m=0;
     double x, y;
     Vector3D dimens;  
     Vector3D a;
@@ -128,9 +124,9 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         case 'p':
         
 
-        if (r==0) {it=DLst.begin();/* it->get()->*/manipulate1(it->get());}
-        else if (r==1) { it=DLst.begin();++it;/* (++it)->get()->*/manipulate1(it->get()); it=DLst.begin();} //////tu nie moge zmienić to może potem zawsze po 
-        else {std::cerr<<"brak drona o podanym numerze."<<std::endl; r=0;}                  //wylądowaniu stawiać nowe drony na liście
+        if (r==0) {it=DLst.begin(); manipulate1(it->get());}
+        else if (r==1) { it=DLst.begin();++it; manipulate1(it->get()); it=DLst.begin();}  
+        else {std::cerr<<"brak drona o podanym numerze."<<std::endl; r=0;}  
         
         break;
 
@@ -156,9 +152,7 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         else if(num==3){Lst.push_back(std::make_shared<Peak>(Lacze,peakamount,a,dimens)); ++peakamount;}
         else {std::cerr<<"Nie ma bryły o takim numerze"<<std::endl;}
 
-        //for (std::shared_ptr<Solid> &ob2 : Lst) {
-    //Lacze.DodajNazwePliku(ob2->getname().c_str(),PzG::RR_Ciagly, 2);
-    //ob2->save();}
+        
 
         break;
 
@@ -182,7 +176,7 @@ std::cout<<"k - koniec dzialania programu"<<std::endl<<std::endl;
         
         if (m<n && m>0) {
             
-            advance(iter, m+1);////-1
+            advance(iter, m+1);
             Lst.erase(iter);
         }
         else {std::cerr<<"nie ma przeszkody o tym numerze"<<std::endl;}
@@ -261,6 +255,20 @@ free (ground);
 
 
 
+ bool Scene::canland(  Drone *tmp )  {
+int  f=0;
+        for ( std::shared_ptr<Solid> &obg: Lst) {
+            if (obg->getmid() == tmp->getmid()) { std::cout<<"ten sam"<<std::endl; continue;}
+            if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==false) {std::cout<<"można lądować"<<std::endl;}
+            else if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==true) {std::cout<<"nie można lądować"<<std::endl;++f;}
+            
+        }
+        if (f>0) {return false;}
+        else {return true;}
+    }
+
+
+
 
  void Scene::manipulate1(Drone *tmp){
 
@@ -284,6 +292,8 @@ free (ground);
             tmp->save();
             Lacze.Rysuj();
             usleep(20000);
+
+            tmp->setbmid(tmp->cpy.getmid());
         }
       if(angle>0){
         for (int i=0; i<angle; ++i){
@@ -295,6 +305,8 @@ free (ground);
             tmp->save();
             Lacze.Rysuj();
             usleep(20000);
+
+            tmp->setbmid(tmp->cpy.getmid());
         }
         }
         else {
@@ -307,6 +319,8 @@ free (ground);
             tmp->save();
             Lacze.Rysuj();
             usleep(20000);
+
+            tmp->setbmid(tmp->cpy.getmid());
         }
         }
     
@@ -320,9 +334,33 @@ free (ground);
         tmp->save();
         Lacze.Rysuj();
         usleep(20000);
-        }
 
-    //if (canland(sc1)==true) {
+        tmp->setbmid(tmp->cpy.getmid());
+        }
+        
+
+    while(canland(tmp)==false) {
+        std::cout<<"Wykryto przeszkodę"<<std::endl;
+
+        path=50;
+        angle=0;
+        tmp->calculatepath(path,angle);
+        for (int k = 0; k < path; k++)
+        {
+        tmp->cpy = tmp->org;
+        for (int l = 0; l < 4; l++)
+            tmp->cpyw[l] = tmp->orgw[l];
+        tmp->move(1);
+        tmp->rotatew();
+        tmp->save();
+        Lacze.Rysuj();
+        usleep(20000);
+
+        tmp->setbmid(tmp->cpy.getmid());
+        }
+    }
+
+     std::cout<<"Brak przeszkód, lądujemy!"<<std::endl;
         for (int o = 0; o < 100; o++)
         {
         tmp->cpy = tmp->org;
@@ -334,6 +372,10 @@ free (ground);
         tmp->save();
         Lacze.Rysuj();
         usleep(20000);
+
+        tmp->setbmid(tmp->cpy.getmid());
         }
         Lacze.UsunOstatniaNazwe();
+
+
  }

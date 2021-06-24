@@ -18,7 +18,7 @@
 */
 Ridge::Ridge(PzG::LaczeDoGNUPlota  &Lacze, int nr,Vector3D mid,Vector3D dimenn /*double x, double y, double z, std::string name*/):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
-this->oradius=std::max(x,y)+20;
+this->oradius=(std::max(x,y)+20)/2;
 
     double tab[]={x,y,z};
     
@@ -77,3 +77,7 @@ this->oradius=std::max(x,y)+20;
 }
 
 
+ /*bool Solid::istherecolision(double rad, Vector3D midb) {
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
+ }*/

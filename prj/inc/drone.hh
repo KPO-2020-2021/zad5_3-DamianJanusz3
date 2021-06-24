@@ -36,6 +36,7 @@ public:
     Vector3D path;
     //Vector3D mid;
     //std::string type="Dron";
+    double angler=0;
     
 
     
@@ -77,5 +78,19 @@ Drone();
 */
     virtual std::string gettype() override {return type;}
 
+
+    virtual Vector3D getmid() /*const*/ override {return mid;}
+
+    virtual std::string getname() override {return name;}
+
    // bool canland(  Scene &Scn );
+
+   virtual bool istherecolision(double rad, Vector3D midb) override{
+       std::cout<<midb[0]<<" "<<this->mid[0]<<" "<<midb[1]<<" "<<this->mid[1]<<" "<<rad<<" "<<this->oradius<<std::endl;
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;} 
+ }
+
+
+virtual Vector3D getbmid() /*const*/override {return bmid;}
 };

@@ -29,17 +29,23 @@ protected:
 double oradius=0;
 int nr=0;
 Vector3D mid;
+Vector3D bmid;
 std:: string name;
 std::vector<Vector3D> vert;
 Vector3D dimen; 
 std::string type="obiekt niezidentyfikowany";
 
 public:
+virtual Vector3D getbmid() /*const*/ {return bmid;}
+void setbmid(Vector3D bmidd) {this->bmid=bmidd;}
 //bool canland(  Scene &Scn );
 //Solid();
 
 
-bool istherecolision(double rad, Vector3D midb);
+virtual bool istherecolision(double rad, Vector3D midb){
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
+ }
 /*! 
 * Metoda dostępowa, zwraca promień obrysu
 */
@@ -67,7 +73,7 @@ void setname (std::string name);
 /*! 
 * Metoda dostępowa, zwraca środek
 */
-virtual Vector3D getmid() /*const*/ {return mid;}//Vector3D getmid() const;///////////////const?
+virtual Vector3D getmid() /*const*/ {return mid;}//Vector3D getmid() {return mid;} ///const;///////////////const?
 /*! 
 * Metoda dostępowa, zwraca nazwę
 */

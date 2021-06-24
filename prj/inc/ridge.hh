@@ -47,4 +47,10 @@ virtual std::string getname() override {return name;}
 */
 virtual double getoradius() override{return oradius;}
 
+virtual bool istherecolision(double rad, Vector3D midb) override{
+    std::cout<<midb[0]<<" "<<this->mid[0]<<" "<<midb[1]<<" "<<this->mid[1]<<" "<<rad<<" "<<this->oradius<<std::endl;
+     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
+     else {return false;}
+ }
+
 };
