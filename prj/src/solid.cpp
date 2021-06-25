@@ -11,7 +11,7 @@
 
 
 
-//Solid::Solid():Lacze(Lacze) {Vector3D tmp; nr=0; mid=tmp; name=" "; dimen=tmp; type="obiekt niezidentyfikowany";}
+
  /*! 
 * Operator indeksowania klasy Solid. 
 * \param[in]  - index -indeks,                
@@ -51,23 +51,7 @@ void Solid::setname (std::string name){
 this->name=name;
 }
 
-/*! 
-* Metoda odpowiedzialna za zwracanie środka     
-* \param[in]  - brak,                                              
-* Funkcja dostępowa do środka, zwraca środek bryły  
-*/
-//Vector3D Solid::getmid() const{
-//return mid;
-//}
 
-/*! 
-* Metoda odpowiedzialna za zwracanie nazwy     
-* \param[in]  - brak,                                              
-* Funkcja dostępowa do nazwy, zwraca nazwę  
-*/
-//std::string Solid::getname() const{
-//return name;
-//}
 
 /*! 
 * Metoda odpowiedzialna za przesuwanie bryły    
@@ -81,7 +65,7 @@ for (int i=0; i<(int)vert.size(); ++i) {
 }
 mid=mid+mov;
 
-//bmid=bmid+mov;
+
 }
 
 /*! 
@@ -96,7 +80,7 @@ for (int i=0; i<(int)vert.size(); ++i) {
 }
 mid=rot*mid;
 
-//bmid=rot*mid;
+
 }
 
 /*! 
@@ -131,7 +115,4 @@ mid=rot*mid;
 
 
 
- /* bool Solid::istherecolision(double rad, Vector3D midb) {
-     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
-     else {return false;}
- }*/
+ 

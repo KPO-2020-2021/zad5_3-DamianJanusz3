@@ -18,17 +18,14 @@
  */
 class Ridge: public Solid, public Obstacles{
 
-protected:
-
-//std::string type="Góra z granią";
 
    
 public:
 
 /*! 
-* Konstruktor parametryczny klasy Ridge
+* Konstruktor parametryczny klasy Ridge 
 */
-Ridge(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D()/*double x=100, double y=100, double z=100*/);  
+Ridge(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid=Vector3D(),Vector3D dimenn=Vector3D());  
 
 /*! 
 * Metoda dostępowa, zwraca typ obiektu
@@ -37,7 +34,7 @@ virtual std::string gettype() override {return type;}
 /*! 
 * Metoda dostępowa, zwraca środek obiektu
 */
-virtual Vector3D getmid() /*const*/ override {return mid;}
+virtual Vector3D getmid()  override {return mid;}
 /*! 
 * Metoda dostępowa, zwraca nazwę obiektu
 */
@@ -47,8 +44,13 @@ virtual std::string getname() override {return name;}
 */
 virtual double getoradius() override{return oradius;}
 
+/*! 
+* Metoda sprawdzająca czy zachodzi kolizja
+* \param[in]  - rad - promień obrysu drona
+* \param[in]  - midb- środek drona
+*/
 virtual bool istherecolision(double rad, Vector3D midb) override{
-    std::cout<<midb[0]<<" "<<this->mid[0]<<" "<<midb[1]<<" "<<this->mid[1]<<" "<<rad<<" "<<this->oradius<<std::endl;
+
      if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
      else {return false;}
  }

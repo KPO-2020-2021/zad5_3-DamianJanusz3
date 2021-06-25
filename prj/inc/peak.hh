@@ -18,9 +18,6 @@
  */
 class Peak: public Solid, public Obstacles {
 
-protected:
-
-//std::string type="Góra ze szczytem";
 
    
 public:
@@ -38,7 +35,7 @@ virtual std::string gettype() override {return type;}
 /*! 
 * Metoda dostępowa, zwraca środek obiektu
 */
-virtual Vector3D getmid() /*const*/ override {return mid;};
+virtual Vector3D getmid()  override {return mid;};
 /*! 
 * Metoda dostępowa, zwraca nazwę obiektu
 */
@@ -48,6 +45,11 @@ virtual std::string getname() override {return name;}
 */
 virtual double getoradius() override{return oradius;}
 
+/*! 
+* Metoda sprawdzająca czy zachodzi kolizja
+* \param[in]  - rad - promień obrysu drona
+* \param[in]  - midb- środek drona
+*/
 virtual bool istherecolision(double rad, Vector3D midb) override{
      if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
      else {return false;}

@@ -6,7 +6,7 @@ digraph "Cuboid"
   Node1 [label="Cuboid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Solid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html",tooltip=" "];
-  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mid\ndimen" ,fontname="Helvetica"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mid\nbmid\ndimen" ,fontname="Helvetica"];
   Node3 [label="Vector\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector.html",tooltip=" "];
   Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="Helvetica"];
   Node4 [label="Vector\< type, size1 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector.html",tooltip=" "];

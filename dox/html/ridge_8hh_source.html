@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dragonfly faza2: Plik źródłowy ridge.hh</title>
+<title>My Project: Plik źródłowy ridge.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Dragonfly faza2
-   &#160;<span id="projectnumber">2.0</span>
+   <div id="projectname">My Project
+   &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
  </tr>
@@ -66,33 +66,50 @@ $(document).ready(function(){initNavTree('ridge_8hh_source.html',''); initResiza
 <a href="ridge_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="solid_8hh.html">solid.hh</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_ridge.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ridge.html">Ridge</a>: <span class="keyword">public</span> <a class="code" href="class_solid.html">Solid</a>{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="obstacles_8hh.html">obstacles.hh</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_ridge.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ridge.html">Ridge</a>: <span class="keyword">public</span> <a class="code" href="class_solid.html">Solid</a>, <span class="keyword">public</span> <a class="code" href="class_obstacles.html">Obstacles</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_ridge.html#ae5621bafaaba9baac586b3afda762a24">   22</a></span>&#160;std::string <a class="code" href="class_ridge.html#ae5621bafaaba9baac586b3afda762a24">type</a>=<span class="stringliteral">&quot;Góra z granią&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="class_ridge.html#a29ae6fefce9037ad6fd2c4fdf284cbde">Ridge</a>(<a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>=<a class="code" href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a>(), <span class="keywordtype">double</span> x=100, <span class="keywordtype">double</span> y=100, <span class="keywordtype">double</span> z=100, std::string <a class="code" href="class_solid.html#a532b9181b67350a12c2e123c9210b955">name</a>=<span class="stringliteral">&quot;../datasets/ridge.dat&quot;</span>);  </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_ridge.html#afe5dbaf76740124620f112cb97d1a77d">   35</a></span>&#160;std::string <a class="code" href="class_ridge.html#afe5dbaf76740124620f112cb97d1a77d">gettype</a>() {<span class="keywordflow">return</span> <a class="code" href="class_ridge.html#ae5621bafaaba9baac586b3afda762a24">type</a>;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="class_ridge.html#a91f006d44ed42cd494827da0ec9c6cca">Ridge</a>(<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a> ,<span class="keywordtype">int</span> <a class="code" href="class_solid.html#a8a22008252a86b5261539904b080027f">nr</a>,<a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>=<a class="code" href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a>(),<a class="code" href="class_vector.html">Vector3D</a> dimenn=<a class="code" href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a>());  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_ridge.html#aff845ae6e57a0c93930891d0efc89184">   33</a></span>&#160;<span class="keyword">virtual</span> std::string <a class="code" href="class_ridge.html#aff845ae6e57a0c93930891d0efc89184">gettype</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> <a class="code" href="class_solid.html#a18a206f9a37e5332910aaeb26b665271">type</a>;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_ridge.html#a580962b267bdffbf62e7b2c61f15b42d">   37</a></span>&#160;<span class="keyword">virtual</span> <a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="class_ridge.html#a580962b267bdffbf62e7b2c61f15b42d">getmid</a>()<span class="keyword">  override </span>{<span class="keywordflow">return</span> <a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_ridge.html#a883c9ba17c4e21d427bd313f7b8a2aa3">   41</a></span>&#160;<span class="keyword">virtual</span> std::string <a class="code" href="class_ridge.html#a883c9ba17c4e21d427bd313f7b8a2aa3">getname</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> <a class="code" href="class_solid.html#a532b9181b67350a12c2e123c9210b955">name</a>;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_ridge.html#a2abd018cb5f7b91b4ed9f93bbbf3fdb5">   45</a></span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_ridge.html#a2abd018cb5f7b91b4ed9f93bbbf3fdb5">getoradius</a>()<span class="keyword"> override</span>{<span class="keywordflow">return</span> <a class="code" href="class_solid.html#a16ee0efbece36c131d6de9676683302a">oradius</a>;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_ridge.html#a2121827508d0e246d0e879a3d48edd78">   52</a></span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_ridge.html#a2121827508d0e246d0e879a3d48edd78">istherecolision</a>(<span class="keywordtype">double</span> rad, <a class="code" href="class_vector.html">Vector3D</a> midb)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     <span class="keywordflow">if</span> (sqrt(pow((midb[0]-this-&gt;<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]),2)+pow((midb[1]-this-&gt;<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]),2))&lt;=rad+this-&gt;<a class="code" href="class_solid.html#a16ee0efbece36c131d6de9676683302a">oradius</a>) {<span class="keywordflow">return</span> <span class="keyword">true</span>;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     <span class="keywordflow">else</span> {<span class="keywordflow">return</span> <span class="keyword">false</span>;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_solid_html"><div class="ttname"><a href="class_solid.html">Solid</a></div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00024">solid.hh:24</a></div></div>
+<div class="ttc" id="aclass_solid_html"><div class="ttname"><a href="class_solid.html">Solid</a></div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00025">solid.hh:25</a></div></div>
+<div class="ttc" id="aclass_ridge_html_a883c9ba17c4e21d427bd313f7b8a2aa3"><div class="ttname"><a href="class_ridge.html#a883c9ba17c4e21d427bd313f7b8a2aa3">Ridge::getname</a></div><div class="ttdeci">virtual std::string getname() override</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00041">ridge.hh:41</a></div></div>
 <div class="ttc" id="asolid_8hh_html"><div class="ttname"><a href="solid_8hh.html">solid.hh</a></div><div class="ttdoc">Definicja klasy Solid.</div></div>
-<div class="ttc" id="aclass_ridge_html_ae5621bafaaba9baac586b3afda762a24"><div class="ttname"><a href="class_ridge.html#ae5621bafaaba9baac586b3afda762a24">Ridge::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00022">ridge.hh:22</a></div></div>
-<div class="ttc" id="aclass_ridge_html"><div class="ttname"><a href="class_ridge.html">Ridge</a></div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00018">ridge.hh:18</a></div></div>
+<div class="ttc" id="aclass_ridge_html_aff845ae6e57a0c93930891d0efc89184"><div class="ttname"><a href="class_ridge.html#aff845ae6e57a0c93930891d0efc89184">Ridge::gettype</a></div><div class="ttdeci">virtual std::string gettype() override</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00033">ridge.hh:33</a></div></div>
+<div class="ttc" id="aclass_ridge_html_a2121827508d0e246d0e879a3d48edd78"><div class="ttname"><a href="class_ridge.html#a2121827508d0e246d0e879a3d48edd78">Ridge::istherecolision</a></div><div class="ttdeci">virtual bool istherecolision(double rad, Vector3D midb) override</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00052">ridge.hh:52</a></div></div>
+<div class="ttc" id="aclass_obstacles_html"><div class="ttname"><a href="class_obstacles.html">Obstacles</a></div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00019">obstacles.hh:19</a></div></div>
+<div class="ttc" id="aobstacles_8hh_html"><div class="ttname"><a href="obstacles_8hh.html">obstacles.hh</a></div><div class="ttdoc">Definicja klasy Obstacles.</div></div>
+<div class="ttc" id="aclass_ridge_html"><div class="ttname"><a href="class_ridge.html">Ridge</a></div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00019">ridge.hh:19</a></div></div>
+<div class="ttc" id="aclass_obstacles_html_a1ac520929a9c63101e48d4fa341ff277"><div class="ttname"><a href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Obstacles::Lacze</a></div><div class="ttdeci">PzG::LaczeDoGNUPlota &amp; Lacze</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00023">obstacles.hh:23</a></div></div>
 <div class="ttc" id="avector3_d_8hh_html_a501c8db7ae46c0471ea825f0c8ed9698"><div class="ttname"><a href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a></div><div class="ttdeci">Vector&lt; double, 3 &gt; Vector3D</div><div class="ttdef"><b>Definition:</b> <a href="vector3_d_8hh_source.html#l00012">vector3D.hh:12</a></div></div>
-<div class="ttc" id="aclass_solid_html_a532b9181b67350a12c2e123c9210b955"><div class="ttname"><a href="class_solid.html#a532b9181b67350a12c2e123c9210b955">Solid::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00028">solid.hh:28</a></div></div>
+<div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> <a href="lacze__do__gnuplota_8hh_source.html#l00123">lacze_do_gnuplota.hh:123</a></div></div>
+<div class="ttc" id="aclass_solid_html_a532b9181b67350a12c2e123c9210b955"><div class="ttname"><a href="class_solid.html#a532b9181b67350a12c2e123c9210b955">Solid::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00032">solid.hh:32</a></div></div>
+<div class="ttc" id="aclass_solid_html_a16ee0efbece36c131d6de9676683302a"><div class="ttname"><a href="class_solid.html#a16ee0efbece36c131d6de9676683302a">Solid::oradius</a></div><div class="ttdeci">double oradius</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00028">solid.hh:28</a></div></div>
+<div class="ttc" id="aclass_ridge_html_a580962b267bdffbf62e7b2c61f15b42d"><div class="ttname"><a href="class_ridge.html#a580962b267bdffbf62e7b2c61f15b42d">Ridge::getmid</a></div><div class="ttdeci">virtual Vector3D getmid() override</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00037">ridge.hh:37</a></div></div>
+<div class="ttc" id="aclass_solid_html_a8a22008252a86b5261539904b080027f"><div class="ttname"><a href="class_solid.html#a8a22008252a86b5261539904b080027f">Solid::nr</a></div><div class="ttdeci">int nr</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00029">solid.hh:29</a></div></div>
+<div class="ttc" id="aclass_ridge_html_a91f006d44ed42cd494827da0ec9c6cca"><div class="ttname"><a href="class_ridge.html#a91f006d44ed42cd494827da0ec9c6cca">Ridge::Ridge</a></div><div class="ttdeci">Ridge(PzG::LaczeDoGNUPlota &amp;Lacze, int nr, Vector3D mid=Vector3D(), Vector3D dimenn=Vector3D())</div><div class="ttdef"><b>Definition:</b> <a href="src_2ridge_8cpp_source.html#l00019">src/ridge.cpp:19</a></div></div>
+<div class="ttc" id="aclass_solid_html_a18a206f9a37e5332910aaeb26b665271"><div class="ttname"><a href="class_solid.html#a18a206f9a37e5332910aaeb26b665271">Solid::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00035">solid.hh:35</a></div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; double, 3 &gt;</a></div></div>
-<div class="ttc" id="aclass_ridge_html_a29ae6fefce9037ad6fd2c4fdf284cbde"><div class="ttname"><a href="class_ridge.html#a29ae6fefce9037ad6fd2c4fdf284cbde">Ridge::Ridge</a></div><div class="ttdeci">Ridge(Vector3D mid=Vector3D(), double x=100, double y=100, double z=100, std::string name=&quot;../datasets/ridge.dat&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="src_2ridge_8cpp_source.html#l00019">src/ridge.cpp:19</a></div></div>
-<div class="ttc" id="aclass_ridge_html_afe5dbaf76740124620f112cb97d1a77d"><div class="ttname"><a href="class_ridge.html#afe5dbaf76740124620f112cb97d1a77d">Ridge::gettype</a></div><div class="ttdeci">std::string gettype()</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00035">ridge.hh:35</a></div></div>
-<div class="ttc" id="aclass_solid_html_a600159c321b31ff0559270ce1b31cd20"><div class="ttname"><a href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">Solid::mid</a></div><div class="ttdeci">Vector3D mid</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00027">solid.hh:27</a></div></div>
+<div class="ttc" id="aclass_ridge_html_a2abd018cb5f7b91b4ed9f93bbbf3fdb5"><div class="ttname"><a href="class_ridge.html#a2abd018cb5f7b91b4ed9f93bbbf3fdb5">Ridge::getoradius</a></div><div class="ttdeci">virtual double getoradius() override</div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00045">ridge.hh:45</a></div></div>
+<div class="ttc" id="aclass_solid_html_a600159c321b31ff0559270ce1b31cd20"><div class="ttname"><a href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">Solid::mid</a></div><div class="ttdeci">Vector3D mid</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00030">solid.hh:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

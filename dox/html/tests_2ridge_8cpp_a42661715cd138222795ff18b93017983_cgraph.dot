@@ -6,5 +6,5 @@ digraph "TEST_CASE"
   rankdir="LR";
   Node1 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Ridge::gettype",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ridge.html#afe5dbaf76740124620f112cb97d1a77d",tooltip=" "];
+  Node2 [label="Peak::gettype",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_peak.html#a4d6e752de12a7d4da3cef2d46ce62ecc",tooltip=" "];
 }

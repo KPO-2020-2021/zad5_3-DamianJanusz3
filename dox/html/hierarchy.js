@@ -12,7 +12,6 @@ var hierarchy =
     [ "doctest::ContextOptions", "structdoctest_1_1_context_options.html", null ],
     [ "doctest::CurrentTestCaseStats", "structdoctest_1_1_current_test_case_stats.html", null ],
     [ "doctest::detail::deferred_false< T >", "structdoctest_1_1detail_1_1deferred__false.html", null ],
-    [ "Drone", "class_drone.html", null ],
     [ "Dummy", "class_dummy.html", null ],
     [ "doctest::detail::enable_if< CONDITION, TYPE >", "structdoctest_1_1detail_1_1enable__if.html", null ],
     [ "doctest::detail::enable_if< true, TYPE >", "structdoctest_1_1detail_1_1enable__if_3_01true_00_01_t_y_p_e_01_4.html", null ],
@@ -36,7 +35,12 @@ var hierarchy =
       [ "doctest::detail::MessageBuilder", "structdoctest_1_1detail_1_1_message_builder.html", null ]
     ] ],
     [ "doctest::mpi_sub_comm", "structdoctest_1_1mpi__sub__comm.html", null ],
-    [ "Obstacles", "class_obstacles.html", null ],
+    [ "Obstacles", "class_obstacles.html", [
+      [ "Drone", "class_drone.html", null ],
+      [ "Flat", "class_flat.html", null ],
+      [ "Peak", "class_peak.html", null ],
+      [ "Ridge", "class_ridge.html", null ]
+    ] ],
     [ "doctest::QueryData", "structdoctest_1_1_query_data.html", null ],
     [ "doctest::detail::RelationalComparator< int, L, R >", "structdoctest_1_1detail_1_1_relational_comparator.html", null ],
     [ "doctest::detail::remove_const< T >", "structdoctest_1_1detail_1_1remove__const.html", null ],
@@ -48,6 +52,7 @@ var hierarchy =
     [ "Scene", "class_scene.html", null ],
     [ "Solid", "class_solid.html", [
       [ "Cuboid", "class_cuboid.html", null ],
+      [ "Drone", "class_drone.html", null ],
       [ "Flat", "class_flat.html", null ],
       [ "Peak", "class_peak.html", null ],
       [ "Prism", "class_prism.html", null ],

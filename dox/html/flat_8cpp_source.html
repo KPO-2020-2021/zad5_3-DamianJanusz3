@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dragonfly faza2: Plik źródłowy flat.cpp</title>
+<title>My Project: Plik źródłowy flat.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Dragonfly faza2
-   &#160;<span id="projectnumber">2.0</span>
+   <div id="projectname">My Project
+   &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
  </tr>
@@ -64,73 +64,88 @@ $(document).ready(function(){initNavTree('flat_8cpp_source.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <a href="flat_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="flat_8hh.html">flat.hh</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_flat.html#ae74b524e1fa854cff965bb727158693e">   19</a></span>&#160;<a class="code" href="class_flat.html#ae74b524e1fa854cff965bb727158693e">Flat::Flat</a>(<a class="code" href="class_vector.html">Vector3D</a> mid, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z, std::string <a class="code" href="doctest_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) { </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">double</span> tab[]={x,y,z};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_solid.html#abb6f91c8c9888d1b27d656c120b8c852">dimen</a>=<a class="code" href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a>(tab);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="flat_8hh.html">flat.hh</a>&quot;</span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_flat.html#ae38169cd181859d81f7b2c27641945e2">   19</a></span>&#160;<a class="code" href="class_flat.html#ae38169cd181859d81f7b2c27641945e2">Flat::Flat</a>(<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;Lacze ,<span class="keywordtype">int</span> nr,<a class="code" href="class_vector.html">Vector3D</a> mid,<a class="code" href="class_vector.html">Vector3D</a> dimenn):<a class="code" href="class_obstacles.html">Obstacles</a>(Lacze) { </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">double</span> x=dimenn[0], y=dimenn[1], z=dimenn[2];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;this-&gt;<a class="code" href="class_solid.html#a16ee0efbece36c131d6de9676683302a">oradius</a>=(std::max(x,y)+20)/2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">double</span> tab[]={x,y,z};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    this-&gt;name=<a class="code" href="class_solid.html#a532b9181b67350a12c2e123c9210b955">name</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_solid.html#abb6f91c8c9888d1b27d656c120b8c852">dimen</a>=<a class="code" href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a>(tab);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;mid=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> vertex;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;<a class="code" href="class_solid.html#a532b9181b67350a12c2e123c9210b955">name</a>=<span class="stringliteral">&quot;../datasets/fmountain&quot;</span>+std::to_string(<a class="code" href="class_solid.html#a8a22008252a86b5261539904b080027f">nr</a>)+<span class="stringliteral">&quot;.dat&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    this-&gt;<a class="code" href="class_solid.html#a18a206f9a37e5332910aaeb26b665271">type</a>=<span class="stringliteral">&quot;Płaskowyż&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this-&gt;mid=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> vertex;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]+(y/2);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]+(x/2);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]+(z/2);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   vertex[0]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[0]-(x/2);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   vertex[1]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[1]-(y/2);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   vertex[2]=<a class="code" href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">mid</a>[2]-(z/2);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <a class="code" href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">vert</a>.push_back(vertex);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f">DodajNazwePliku</a>(this-&gt;<a class="code" href="class_flat.html#a5f5892bdf3f9b7b95c23ad7041d020de">getname</a>().c_str(), <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">PzG::RR_Ciagly</a>, 2);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    this-&gt;<a class="code" href="class_solid.html#ab34e84803e8397bc408fc1b3f9ab3a01">save</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_solid_html_abb6f91c8c9888d1b27d656c120b8c852"><div class="ttname"><a href="class_solid.html#abb6f91c8c9888d1b27d656c120b8c852">Solid::dimen</a></div><div class="ttdeci">Vector3D dimen</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00030">solid.hh:30</a></div></div>
-<div class="ttc" id="adoctest_8cpp_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="doctest_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="doctest_8cpp_source.html#l01616">doctest.cpp:1616</a></div></div>
-<div class="ttc" id="aclass_solid_html_a129a3b981af9d2bb703406099a3bd28e"><div class="ttname"><a href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">Solid::vert</a></div><div class="ttdeci">std::vector&lt; Vector3D &gt; vert</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00029">solid.hh:29</a></div></div>
+<div class="ttc" id="aclass_solid_html_abb6f91c8c9888d1b27d656c120b8c852"><div class="ttname"><a href="class_solid.html#abb6f91c8c9888d1b27d656c120b8c852">Solid::dimen</a></div><div class="ttdeci">Vector3D dimen</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00034">solid.hh:34</a></div></div>
+<div class="ttc" id="aclass_obstacles_html"><div class="ttname"><a href="class_obstacles.html">Obstacles</a></div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00019">obstacles.hh:19</a></div></div>
+<div class="ttc" id="anamespace_pz_g_html_a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d"><div class="ttname"><a href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">PzG::RR_Ciagly</a></div><div class="ttdeci">@ RR_Ciagly</div><div class="ttdef"><b>Definition:</b> <a href="lacze__do__gnuplota_8hh_source.html#l00045">lacze_do_gnuplota.hh:45</a></div></div>
+<div class="ttc" id="aclass_obstacles_html_a1ac520929a9c63101e48d4fa341ff277"><div class="ttname"><a href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Obstacles::Lacze</a></div><div class="ttdeci">PzG::LaczeDoGNUPlota &amp; Lacze</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00023">obstacles.hh:23</a></div></div>
+<div class="ttc" id="aclass_solid_html_a129a3b981af9d2bb703406099a3bd28e"><div class="ttname"><a href="class_solid.html#a129a3b981af9d2bb703406099a3bd28e">Solid::vert</a></div><div class="ttdeci">std::vector&lt; Vector3D &gt; vert</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00033">solid.hh:33</a></div></div>
+<div class="ttc" id="aclass_flat_html_a5f5892bdf3f9b7b95c23ad7041d020de"><div class="ttname"><a href="class_flat.html#a5f5892bdf3f9b7b95c23ad7041d020de">Flat::getname</a></div><div class="ttdeci">virtual std::string getname() override</div><div class="ttdef"><b>Definition:</b> <a href="flat_8hh_source.html#l00043">flat.hh:43</a></div></div>
 <div class="ttc" id="avector3_d_8hh_html_a501c8db7ae46c0471ea825f0c8ed9698"><div class="ttname"><a href="vector3_d_8hh.html#a501c8db7ae46c0471ea825f0c8ed9698">Vector3D</a></div><div class="ttdeci">Vector&lt; double, 3 &gt; Vector3D</div><div class="ttdef"><b>Definition:</b> <a href="vector3_d_8hh_source.html#l00012">vector3D.hh:12</a></div></div>
-<div class="ttc" id="aclass_solid_html_a532b9181b67350a12c2e123c9210b955"><div class="ttname"><a href="class_solid.html#a532b9181b67350a12c2e123c9210b955">Solid::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00028">solid.hh:28</a></div></div>
+<div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> <a href="lacze__do__gnuplota_8hh_source.html#l00123">lacze_do_gnuplota.hh:123</a></div></div>
+<div class="ttc" id="aclass_solid_html_a532b9181b67350a12c2e123c9210b955"><div class="ttname"><a href="class_solid.html#a532b9181b67350a12c2e123c9210b955">Solid::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00032">solid.hh:32</a></div></div>
+<div class="ttc" id="aclass_solid_html_a16ee0efbece36c131d6de9676683302a"><div class="ttname"><a href="class_solid.html#a16ee0efbece36c131d6de9676683302a">Solid::oradius</a></div><div class="ttdeci">double oradius</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00028">solid.hh:28</a></div></div>
+<div class="ttc" id="aclass_flat_html_ae38169cd181859d81f7b2c27641945e2"><div class="ttname"><a href="class_flat.html#ae38169cd181859d81f7b2c27641945e2">Flat::Flat</a></div><div class="ttdeci">Flat(PzG::LaczeDoGNUPlota &amp;Lacze, int nr, Vector3D mid=Vector3D(), Vector3D dimenn=Vector3D())</div><div class="ttdef"><b>Definition:</b> <a href="flat_8cpp_source.html#l00019">flat.cpp:19</a></div></div>
+<div class="ttc" id="aclass_solid_html_a8a22008252a86b5261539904b080027f"><div class="ttname"><a href="class_solid.html#a8a22008252a86b5261539904b080027f">Solid::nr</a></div><div class="ttdeci">int nr</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00029">solid.hh:29</a></div></div>
+<div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html_a34bd48f57c0fd69c12bf4127a1cacd8f"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f">PzG::LaczeDoGNUPlota::DodajNazwePliku</a></div><div class="ttdeci">bool DodajNazwePliku(const char *NazwaPliku, RodzajRysowania RodzRys=RR_Ciagly, int Szerokosc=1)</div><div class="ttdoc">Dodaje nazwę pliku.</div><div class="ttdef"><b>Definition:</b> <a href="lacze__do__gnuplota_8cpp_source.html#l00102">lacze_do_gnuplota.cpp:102</a></div></div>
+<div class="ttc" id="aclass_solid_html_a18a206f9a37e5332910aaeb26b665271"><div class="ttname"><a href="class_solid.html#a18a206f9a37e5332910aaeb26b665271">Solid::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00035">solid.hh:35</a></div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="aflat_8hh_html"><div class="ttname"><a href="flat_8hh.html">flat.hh</a></div><div class="ttdoc">Definicja klasy Flat.</div></div>
-<div class="ttc" id="aclass_flat_html_ae74b524e1fa854cff965bb727158693e"><div class="ttname"><a href="class_flat.html#ae74b524e1fa854cff965bb727158693e">Flat::Flat</a></div><div class="ttdeci">Flat(Vector3D mid=Vector3D(), double x=100, double y=100, double z=20, std::string name=&quot;../datasets/flat.dat&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="flat_8cpp_source.html#l00019">flat.cpp:19</a></div></div>
-<div class="ttc" id="aclass_solid_html_a600159c321b31ff0559270ce1b31cd20"><div class="ttname"><a href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">Solid::mid</a></div><div class="ttdeci">Vector3D mid</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00027">solid.hh:27</a></div></div>
+<div class="ttc" id="aclass_solid_html_ab34e84803e8397bc408fc1b3f9ab3a01"><div class="ttname"><a href="class_solid.html#ab34e84803e8397bc408fc1b3f9ab3a01">Solid::save</a></div><div class="ttdeci">void save()</div><div class="ttdef"><b>Definition:</b> <a href="solid_8cpp_source.html#l00091">solid.cpp:91</a></div></div>
+<div class="ttc" id="aclass_solid_html_a600159c321b31ff0559270ce1b31cd20"><div class="ttname"><a href="class_solid.html#a600159c321b31ff0559270ce1b31cd20">Solid::mid</a></div><div class="ttdeci">Vector3D mid</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00030">solid.hh:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

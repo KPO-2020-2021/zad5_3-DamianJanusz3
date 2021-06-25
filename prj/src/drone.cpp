@@ -11,7 +11,7 @@
 * \param[in]  - id -numer drona,   
 * \param[in]  - Lacze -łącze do gnoplota,  
 * \param[in]  - position -wektor określający położenie drona,             
-* Ustawia nazwy plików, dodaje je do gnuplota   
+* Ustawia nazwy plików, dodaje je do gnuplota, ustawia promień obrysu i typ 
 */
 Drone::Drone(int id,PzG::LaczeDoGNUPlota  &Lacze,Vector3D position):Obstacles(Lacze){ 
 
@@ -143,120 +143,6 @@ void Drone::save() {
         
 }
 
-/*! 
-* Metoda odpowiedzialna za manipulację. 
-* \param[in]  - brak,                
-* Wykonuje wszystkie akcje dronami.
-*/
-/*void Drone::manipulate () {
-
-    double path;
-    double angle;
-    //Scene sc1;
-    
-        
-    save();
-    std::cout<<"Podaj kierunek lotu (kat w stopniach)>";
-    std::cin>> angle;
-    std::cout<<"Podaj dlugosc lotu>";
-    std::cin >> path;
-    calculatepath(path,angle);
-    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::RR_Ciagly, 2);
-    for (int i=0; i<100; ++i){
-            cpy=org;
-            for (int j = 0; j < 4; j++)
-            cpyw[j]=orgw[j];
-
-            verticalmove(1);
-            rotatew();
-            save();
-            Lacze.Rysuj();
-            usleep(20000);
-        }
-      if(angle>0){
-        for (int i=0; i<angle; ++i){
-            cpy=org;
-            for (int j = 0; j < 4; j++)
-                cpyw[j] = orgw[j];
-            rotate(1);
-            rotatew();
-            save();
-            Lacze.Rysuj();
-            usleep(20000);
-        }
-        }
-        else {
-            for (int k=0; k>angle; --k){
-            cpy=org;
-            for (int j = 0; j < 4; j++)
-                cpyw[j] = orgw[j];
-            rotate(-1);
-            rotatew();
-            save();
-            Lacze.Rysuj();
-            usleep(20000);
-        }
-        }
-    
-    for (int k = 0; k < path; k++)
-        {
-        cpy = org;
-        for (int l = 0; l < 4; l++)
-            cpyw[l] = orgw[l];
-        move(1);
-        rotatew();
-        save();
-        Lacze.Rysuj();
-        usleep(20000);
-        }
-
-    //if (canland(sc1)==true) {
-        for (int o = 0; o < 100; o++)
-        {
-        cpy = org;
-        for (int p = 0; p < 4; p++)
-           cpyw[p] = orgw[p];
-           
-        verticalmove(-1);
-        rotatew();
-        save();
-        Lacze.Rysuj();
-        usleep(20000);
-        }
-        Lacze.UsunOstatniaNazwe();
-    //}*/
-    /*else if (canland(sc1)==false) {
-        path=path+50;
-        for (int k = 0; k < path; k++)
-        {
-        cpy = org;
-        for (int l = 0; l < 4; l++)
-            cpyw[l] = orgw[l];
-        move(1);
-        rotatew();
-        save();
-        Lacze.Rysuj();
-        usleep(20000);
-        }
-
-
-        for (int o = 0; o < 100; o++)
-        {
-        cpy = org;
-        for (int p = 0; p < 4; p++)
-           cpyw[p] = orgw[p];
-           
-        verticalmove(-1);
-        rotatew();
-        save();
-        Lacze.Rysuj();
-        usleep(20000);
-        }
-        Lacze.UsunOstatniaNazwe();
-    }*/
-
-
-//}
 
 /*! 
 * Metoda odpowiedzialna za wyznaczenie trasy. 
@@ -291,22 +177,3 @@ this->angler=this->angler+angle1;
 
     }
 
-
-
-   /* bool Drone::canland(  Scene &Scn )  {
-
-        for ( std::shared_ptr<Solid> &obg: Scn.getLst()) {
-            if ((Solid*)&obg == this) {continue;}
-            if (obg->istherecolision(getoradius(),getmid())==false) {std::cout<<"można lądować"<<std::endl; return true;}
-            else if (obg->istherecolision(getoradius(),getmid())==true) {std::cout<<"nie można lądować"<<std::endl;return false;}
-        }
-    }*/
-
-
-
-
-    /* bool Solid::istherecolision(double rad, Vector3D midb) {
-     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
-     else {return false;}
-     
- }*/

@@ -32,13 +32,13 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "Dragonfly faza2"
+PROJECT_NAME           = "My Project"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 2.0
+PROJECT_NUMBER         = 3.0
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /home/lapidary/zad5_2-DamianJanusz3/dox
+OUTPUT_DIRECTORY       = /home/lapidary/zad5_3-DamianJanusz3/dox
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -829,7 +829,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /home/lapidary/zad5_2-DamianJanusz3/prj
+INPUT                  = /home/lapidary/zad5_3-DamianJanusz3/prj
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -970,7 +970,7 @@ EXAMPLE_RECURSIVE      = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH             = /home/lapidary/zad5_2-DamianJanusz3/prj/doc/img/Diagram_klas.png
+IMAGE_PATH             = /home/lapidary/zad5_3-DamianJanusz3/prj/doc/img/Diagram_klas.png
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program

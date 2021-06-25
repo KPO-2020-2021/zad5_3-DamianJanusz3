@@ -8,10 +8,12 @@ digraph "Matrix::make3DZ"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Drone::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a9d43801728eee60ad432900b7c3e6049",tooltip=" "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Drone::manipulate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#ab107828b18e17e50b4125711c8394abc",tooltip=" "];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="Drone::rotatew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a0f1e510f390db50d5084281eaf697c93",tooltip=" "];
-  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Scene::manipulate1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#afc0a41afd7123fac9e9a374ba4ebad21",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Scene::interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#a464d4ccb6869c4b858f4a667700c42d5",tooltip=" "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix_8cpp.html#a154b77ebcd444831ba193b0b2536b854",tooltip=" "];
+  Node5 [label="Drone::rotatew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a0f1e510f390db50d5084281eaf697c93",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix_8cpp.html#a154b77ebcd444831ba193b0b2536b854",tooltip=" "];
 }

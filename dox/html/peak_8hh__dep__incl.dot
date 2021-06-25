@@ -5,15 +5,13 @@ digraph "peak.hh"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="peak.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Definicja klasy Peak."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="obstacles.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$obstacles_8hh.html",tooltip="Definicja klasy Obstacles."];
+  Node2 [label="scene.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8hh.html",tooltip="Definicja klasy Scene."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="scene.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8hh.html",tooltip="Definicja klasy Scene."];
-  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$app_2main_8cpp.html",tooltip=" "];
-  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8cpp.html",tooltip="plik źródłowy"];
-  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="obstacles.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$obstacles_8cpp.html",tooltip="plik źródłowy"];
-  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="peak.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$peak_8cpp.html",tooltip="plik źródłowy"];
+  Node3 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$app_2main_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8cpp.html",tooltip="plik źródłowy"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="peak.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$peak_8cpp.html",tooltip="plik źródłowy"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ridge.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_2ridge_8cpp.html",tooltip=" "];
 }

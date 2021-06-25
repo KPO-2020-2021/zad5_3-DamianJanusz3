@@ -10,9 +10,9 @@
 * Konstruktor bezparametryczny klasy Scene. 
 * \param[in]  - brak,                
 * Ustawia zakresy rysowania, tworzy płaszczyznę,
-* losuje pozycje dla dronów i je roztawia, rozstawia pierwsze 4 przeszkody 
+* rozstawia drony, rozstawia pierwsze 4 przeszkody 
 */
-Scene::Scene(){
+Scene::Scene(){ 
 
 Lacze.ZmienTrybRys(PzG::TR_3D);
 
@@ -83,7 +83,7 @@ void Scene::interface(){
 
 Vector3D vec;
 
-std::cout<<"Program dragonfly - faza 1"<<std::endl<<std::endl;
+std::cout<<"Program dragonfly - faza 3"<<std::endl<<std::endl;
 std::cout<<"a - wybierz aktywnego drona"<<std::endl;
 std::cout<<"p - zadaj parametry przelotu"<<std::endl;
 std::cout<<"d - dodaj element powierzchni"<<std::endl;
@@ -254,13 +254,17 @@ free (ground);
  }
 
 
-
+/*! 
+* Metoda odpowiedzialna za sprawdzanie czy można lądować  
+* \param[in]  - *tmp - wskaźnik na aktywnego drona,                                              
+* Sprawdza czy nie występuje kolizja i zwraca odpowiednie wartości
+*/
  bool Scene::canland(  Drone *tmp )  {
 int  f=0;
         for ( std::shared_ptr<Solid> &obg: Lst) {
-            if (obg->getmid() == tmp->getmid()) { std::cout<<"ten sam"<<std::endl; continue;}
-            if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==false) {std::cout<<"można lądować"<<std::endl;}
-            else if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==true) {std::cout<<"nie można lądować"<<std::endl;++f;}
+            if (obg->getmid() == tmp->getmid()) {  continue;}
+            if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==false) {;}
+            else if (obg->istherecolision(tmp->getoradius(),tmp->getbmid())==true) {++f;}
             
         }
         if (f>0) {return false;}
@@ -269,11 +273,16 @@ int  f=0;
 
 
 
-
+/*! 
+* Metoda odpowiedzialna za manipulację dronem  
+* \param[in]  - *tmp - wskaźnik na aktywnego drona,                                              
+* Przesuwa dronem po zadanej trasie
+*/
  void Scene::manipulate1(Drone *tmp){
 
     double path;
     double angle;
+
 
     tmp->save();
     std::cout<<"Podaj kierunek lotu (kat w stopniach)>";
@@ -378,4 +387,22 @@ int  f=0;
         Lacze.UsunOstatniaNazwe();
 
 
+
+iter = Lst.begin();
+it = DLst.begin();
+givebmid(iter->get(),it->get());
+++iter; ++it;
+givebmid(iter->get(),it->get());
+ 
+ }
+
+/*! 
+* Metoda odpowiedzialna za przekazanie środka pomocniczego  
+* \param[in]  - *tmp - wskaźnik na drona na liście przeszkód,    
+* \param[in]  - *tmp2 - wskaźnik na tego samego drona na liście dronów,                                            
+* Przekazuje pomocniczy środek do odpowiadającego obiektu na drugiej liście
+* aby badać poprawnie kolizję
+*/
+ void Scene::givebmid(Solid *tmp, Solid *tmp2) {
+     tmp->setbmid(tmp2->getbmid());
  }

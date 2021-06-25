@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dragonfly faza2: Plik źródłowy obstacles.hh</title>
+<title>My Project: Plik źródłowy obstacles.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Dragonfly faza2
-   &#160;<span id="projectnumber">2.0</span>
+   <div id="projectname">My Project
+   &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
  </tr>
@@ -65,58 +65,70 @@ $(document).ready(function(){initNavTree('obstacles_8hh_source.html',''); initRe
 <div class="contents">
 <a href="obstacles_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor"># pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix3x3_8hh.html">matrix3x3.hh</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vector3_d_8hh.html">vector3D.hh</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#include &quot;solid.hh&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ridge_8hh.html">ridge.hh</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="flat_8hh.html">flat.hh</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="peak_8hh.html">peak.hh</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../inc/lacze_do_gnuplota.hh&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_obstacles.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_obstacles.html">Obstacles</a> { </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_obstacles.html#ac323fa0a7ddbd3b64450b8e08a8c6afd">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_obstacles.html#ac323fa0a7ddbd3b64450b8e08a8c6afd">nr</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">   26</a></span>&#160;    <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_obstacles.html#a31f262dcb85ecca331fcc0cde5edfe75">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_obstacles.html#a31f262dcb85ecca331fcc0cde5edfe75">nextr</a>=0, <a class="code" href="class_obstacles.html#a5e6a123bd752949e9a5b2235602eccde">nextf</a>=0, <a class="code" href="class_obstacles.html#ac9b6d72eb5fb8fa1c1c0268f98a179fa">nextp</a>=0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_obstacles.html#a947a8f6afbc3e5894894684c184063f9">   28</a></span>&#160;    <a class="code" href="class_flat.html">Flat</a> <a class="code" href="class_obstacles.html#a947a8f6afbc3e5894894684c184063f9">fla2</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_obstacles.html#ad199464f93496eafd2177a101cd6bb1c">   29</a></span>&#160;    <a class="code" href="class_ridge.html">Ridge</a> <a class="code" href="class_obstacles.html#ad199464f93496eafd2177a101cd6bb1c">rid2</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_obstacles.html#a4f658040a4f79f80c892fd1464edc865">   30</a></span>&#160;    <a class="code" href="class_peak.html">Peak</a> <a class="code" href="class_obstacles.html#a4f658040a4f79f80c892fd1464edc865">pea2</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../inc/lacze_do_gnuplota.hh&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_obstacles.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_obstacles.html">Obstacles</a> { </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">   23</a></span>&#160;    <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_obstacles.html#a612eef7dff1f128e9f7b8c464d8c514b">   30</a></span>&#160;<a class="code" href="class_obstacles.html#a612eef7dff1f128e9f7b8c464d8c514b">Obstacles</a>(<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>):<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>(<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>) { };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="class_obstacles.html#a51c7f97c28a251ab75d711b23d9fe8e1">Obstacles</a> ();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="class_obstacles.html#a51c7f97c28a251ab75d711b23d9fe8e1">Obstacles</a>(<span class="keywordtype">int</span> <a class="code" href="class_obstacles.html#ac323fa0a7ddbd3b64450b8e08a8c6afd">nr</a>,<span class="keywordtype">int</span> next, <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a>  &amp;<a class="code" href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Lacze</a>,<a class="code" href="class_vector.html">Vector3D</a> dimensions, <a class="code" href="class_vector.html">Vector3D</a> position);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_vector.html">Vector3D</a> <a class="code" href="class_obstacles.html#a00d14bad4a56555cc1e7c6423a8a748c">getmid</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  std::string <a class="code" href="class_obstacles.html#ab806ff5336b9c96ae6dbf728aa22044b">gettype</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  std::string <a class="code" href="class_obstacles.html#a10023a2fc7ba86c3beeebc6240071d68">getname</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    int nr;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    PzG::LaczeDoGNUPlota  &amp;Lacze;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    int nextr=0, nextf=0, nextp=0;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    Flat fla2;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    Ridge rid2;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    Peak pea2;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    Drone p;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">public:</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">Obstacles (int id,PzG::LaczeDoGNUPlota  &amp;Lacze, Vector3D position);*/</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//Obstacles ();</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span><span class="comment">//Obstacles(int nr,int next, PzG::LaczeDoGNUPlota  &amp;Lacze,Vector3D dimensions, Vector3D position);</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; <span class="comment">// Vector3D getmid();</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span> <span class="comment">// std::string gettype();</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span><span class="comment">//  std::string getname();</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_obstacles_html_ab806ff5336b9c96ae6dbf728aa22044b"><div class="ttname"><a href="class_obstacles.html#ab806ff5336b9c96ae6dbf728aa22044b">Obstacles::gettype</a></div><div class="ttdeci">std::string gettype()</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8cpp_source.html#l00084">obstacles.cpp:84</a></div></div>
-<div class="ttc" id="aclass_peak_html"><div class="ttname"><a href="class_peak.html">Peak</a></div><div class="ttdef"><b>Definition:</b> <a href="peak_8hh_source.html#l00019">peak.hh:19</a></div></div>
-<div class="ttc" id="aridge_8hh_html"><div class="ttname"><a href="ridge_8hh.html">ridge.hh</a></div><div class="ttdoc">Definicja klasy Ridge.</div></div>
-<div class="ttc" id="aclass_obstacles_html_a947a8f6afbc3e5894894684c184063f9"><div class="ttname"><a href="class_obstacles.html#a947a8f6afbc3e5894894684c184063f9">Obstacles::fla2</a></div><div class="ttdeci">Flat fla2</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00028">obstacles.hh:28</a></div></div>
-<div class="ttc" id="apeak_8hh_html"><div class="ttname"><a href="peak_8hh.html">peak.hh</a></div><div class="ttdoc">Definicja klasy Peak.</div></div>
-<div class="ttc" id="aclass_obstacles_html"><div class="ttname"><a href="class_obstacles.html">Obstacles</a></div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00023">obstacles.hh:23</a></div></div>
-<div class="ttc" id="aclass_ridge_html"><div class="ttname"><a href="class_ridge.html">Ridge</a></div><div class="ttdef"><b>Definition:</b> <a href="ridge_8hh_source.html#l00018">ridge.hh:18</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_a51c7f97c28a251ab75d711b23d9fe8e1"><div class="ttname"><a href="class_obstacles.html#a51c7f97c28a251ab75d711b23d9fe8e1">Obstacles::Obstacles</a></div><div class="ttdeci">Obstacles()</div></div>
-<div class="ttc" id="aclass_obstacles_html_a1ac520929a9c63101e48d4fa341ff277"><div class="ttname"><a href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Obstacles::Lacze</a></div><div class="ttdeci">PzG::LaczeDoGNUPlota &amp; Lacze</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00026">obstacles.hh:26</a></div></div>
-<div class="ttc" id="aclass_flat_html"><div class="ttname"><a href="class_flat.html">Flat</a></div><div class="ttdef"><b>Definition:</b> <a href="flat_8hh_source.html#l00019">flat.hh:19</a></div></div>
+<div class="ttc" id="aclass_obstacles_html_a612eef7dff1f128e9f7b8c464d8c514b"><div class="ttname"><a href="class_obstacles.html#a612eef7dff1f128e9f7b8c464d8c514b">Obstacles::Obstacles</a></div><div class="ttdeci">Obstacles(PzG::LaczeDoGNUPlota &amp;Lacze)</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00030">obstacles.hh:30</a></div></div>
+<div class="ttc" id="aclass_obstacles_html"><div class="ttname"><a href="class_obstacles.html">Obstacles</a></div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00019">obstacles.hh:19</a></div></div>
+<div class="ttc" id="aclass_obstacles_html_a1ac520929a9c63101e48d4fa341ff277"><div class="ttname"><a href="class_obstacles.html#a1ac520929a9c63101e48d4fa341ff277">Obstacles::Lacze</a></div><div class="ttdeci">PzG::LaczeDoGNUPlota &amp; Lacze</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00023">obstacles.hh:23</a></div></div>
 <div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> <a href="lacze__do__gnuplota_8hh_source.html#l00123">lacze_do_gnuplota.hh:123</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_ac9b6d72eb5fb8fa1c1c0268f98a179fa"><div class="ttname"><a href="class_obstacles.html#ac9b6d72eb5fb8fa1c1c0268f98a179fa">Obstacles::nextp</a></div><div class="ttdeci">int nextp</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00027">obstacles.hh:27</a></div></div>
-<div class="ttc" id="avector3_d_8hh_html"><div class="ttname"><a href="vector3_d_8hh.html">vector3D.hh</a></div><div class="ttdoc">Uszczególnienie szablonu dla typu double i rozmiaru 3.</div></div>
-<div class="ttc" id="aclass_obstacles_html_ad199464f93496eafd2177a101cd6bb1c"><div class="ttname"><a href="class_obstacles.html#ad199464f93496eafd2177a101cd6bb1c">Obstacles::rid2</a></div><div class="ttdeci">Ridge rid2</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00029">obstacles.hh:29</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_a5e6a123bd752949e9a5b2235602eccde"><div class="ttname"><a href="class_obstacles.html#a5e6a123bd752949e9a5b2235602eccde">Obstacles::nextf</a></div><div class="ttdeci">int nextf</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00027">obstacles.hh:27</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_a00d14bad4a56555cc1e7c6423a8a748c"><div class="ttname"><a href="class_obstacles.html#a00d14bad4a56555cc1e7c6423a8a748c">Obstacles::getmid</a></div><div class="ttdeci">Vector3D getmid()</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8cpp_source.html#l00061">obstacles.cpp:61</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_a4f658040a4f79f80c892fd1464edc865"><div class="ttname"><a href="class_obstacles.html#a4f658040a4f79f80c892fd1464edc865">Obstacles::pea2</a></div><div class="ttdeci">Peak pea2</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00030">obstacles.hh:30</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_a31f262dcb85ecca331fcc0cde5edfe75"><div class="ttname"><a href="class_obstacles.html#a31f262dcb85ecca331fcc0cde5edfe75">Obstacles::nextr</a></div><div class="ttdeci">int nextr</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00027">obstacles.hh:27</a></div></div>
-<div class="ttc" id="aclass_obstacles_html_ac323fa0a7ddbd3b64450b8e08a8c6afd"><div class="ttname"><a href="class_obstacles.html#ac323fa0a7ddbd3b64450b8e08a8c6afd">Obstacles::nr</a></div><div class="ttdeci">int nr</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8hh_source.html#l00025">obstacles.hh:25</a></div></div>
-<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; double, 3 &gt;</a></div></div>
-<div class="ttc" id="aflat_8hh_html"><div class="ttname"><a href="flat_8hh.html">flat.hh</a></div><div class="ttdoc">Definicja klasy Flat.</div></div>
-<div class="ttc" id="aclass_obstacles_html_a10023a2fc7ba86c3beeebc6240071d68"><div class="ttname"><a href="class_obstacles.html#a10023a2fc7ba86c3beeebc6240071d68">Obstacles::getname</a></div><div class="ttdeci">std::string getname()</div><div class="ttdef"><b>Definition:</b> <a href="obstacles_8cpp_source.html#l00105">obstacles.cpp:105</a></div></div>
-<div class="ttc" id="amatrix3x3_8hh_html"><div class="ttname"><a href="matrix3x3_8hh.html">matrix3x3.hh</a></div><div class="ttdoc">Uszczególnienie szablonu dla typu double i rozmiaru 3.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -7,7 +7,7 @@
  * Plik zawiera definicję klasy Solid
  */
 
-//#include "size.hh" 
+
 #include "matrix3x3.hh"
 #include "vector3D.hh"
 #include <iostream>
@@ -15,12 +15,11 @@
 #include <math.h>
 #include <fstream>
 #include <vector>
-//#include "../inc/lacze_do_gnuplota.hh"
-///#include "scene.hh"
+
 
 
 /*!
- * Solid zawiera kontener na wierzchołki, wektor środka bryły, nazwę, typ,
+ * Solid zawiera kontener na wierzchołki, wektor środka bryły, wektor pomocniczego środka, nazwę, typ,
  * nr bryły, promień obrsysu oraz wymiary.
  */
 class Solid {
@@ -36,12 +35,22 @@ Vector3D dimen;
 std::string type="obiekt niezidentyfikowany";
 
 public:
-virtual Vector3D getbmid() /*const*/ {return bmid;}
+/*! 
+* Metoda dostępowa, zwraca pomocniczy środek
+*/
+virtual Vector3D getbmid() {return bmid;}
+/*! 
+* Metoda odpowiedzialna za ustawienie pomocniczego środka
+*/
 void setbmid(Vector3D bmidd) {this->bmid=bmidd;}
-//bool canland(  Scene &Scn );
-//Solid();
 
 
+/*! 
+* Metoda sprawdzająca czy zachodzi kolizja
+* \param[in]  - rad - promień obrysu drona
+* \param[in]  - midb- środek drona
+* jeśli tak zwraca true jeśli nie zwraca false
+*/
 virtual bool istherecolision(double rad, Vector3D midb){
      if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
      else {return false;}
@@ -73,11 +82,11 @@ void setname (std::string name);
 /*! 
 * Metoda dostępowa, zwraca środek
 */
-virtual Vector3D getmid() /*const*/ {return mid;}//Vector3D getmid() {return mid;} ///const;///////////////const?
+virtual Vector3D getmid() {return mid;}
 /*! 
 * Metoda dostępowa, zwraca nazwę
 */
-virtual std:: string getname () /*const;*/ {return name;}
+virtual std:: string getname () {return name;}
 /*! 
 * Metoda odpowiedzialna za przesunięcie bryły
 */

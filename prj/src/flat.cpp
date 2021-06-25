@@ -14,7 +14,7 @@
 * \param[in]  - nr - numer bryły
 * \param[in]  - Lacze - łącze do gnuplota
 * \param[in]  - dimen - wektor wymiarów
-* wpisuje do kontenera wszystkie wierzchołki płaskowyżu, dodaje nazwę pliku do gnuplota
+* wpisuje do kontenera wszystkie wierzchołki płaskowyżu, dodaje nazwę pliku do gnuplota, ustawia typ i promień obrysu
 */
 Flat::Flat(PzG::LaczeDoGNUPlota  &Lacze ,int nr,Vector3D mid,Vector3D dimenn):Obstacles(Lacze) { 
 double x=dimenn[0], y=dimenn[1], z=dimenn[2];
@@ -74,7 +74,4 @@ this->oradius=(std::max(x,y)+20)/2;
 }
 
 
- /*bool Solid::istherecolision(double rad, Vector3D midb) {
-     if (sqrt(pow((midb[0]-this->mid[0]),2)+pow((midb[1]-this->mid[1]),2))<=rad+this->oradius) {return true;}
-     else {return false;}
- }*/
+ 

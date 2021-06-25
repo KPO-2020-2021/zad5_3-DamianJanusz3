@@ -10,16 +10,18 @@ digraph "Solid::move"
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="Drone::move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a48d21a869d0c8051025b20494ae8db19",tooltip=" "];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="Drone::manipulate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#ab107828b18e17e50b4125711c8394abc",tooltip=" "];
-  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="Drone::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a9d43801728eee60ad432900b7c3e6049",tooltip=" "];
-  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Scene::manipulate1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#afc0a41afd7123fac9e9a374ba4ebad21",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Scene::interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#a464d4ccb6869c4b858f4a667700c42d5",tooltip=" "];
   Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="Drone::rotatew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a0f1e510f390db50d5084281eaf697c93",tooltip=" "];
+  Node6 [label="Drone::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a9d43801728eee60ad432900b7c3e6049",tooltip=" "];
   Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_2cuboid_8cpp.html#a94faa06e586eead4466fa2bef334e3a9",tooltip=" "];
+  Node7 [label="Drone::rotatew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#a0f1e510f390db50d5084281eaf697c93",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="Drone::verticalmove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#afaef746e896166beecb2adc74fa46742",tooltip=" "];
-  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_2cuboid_8cpp.html#a94faa06e586eead4466fa2bef334e3a9",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Drone::verticalmove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_drone.html#afaef746e896166beecb2adc74fa46742",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

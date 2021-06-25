@@ -15,14 +15,12 @@
 #include <memory>
 #include <list>
 
-//#include "obstacles.hh"
-//#include "solid.hh"/////?????????????
+
 #include "ridge.hh"
 #include "flat.hh"
 #include "peak.hh"
 #include "example.h"
 #include "lacze_do_gnuplota.hh"
-//#include "prism.hh"
 #include "drone.hh"
 #include "surface.hh"
 
@@ -63,8 +61,16 @@ void interface();
 */
 void deletename ( PzG::LaczeDoGNUPlota  &Lacze);
 
-//std::list<std::shared_ptr<Solid>> getLst() const {return Lst;}
+/*! 
+* Metoda odpowiedzialna za manipulację dronem
+*/
 void manipulate1(Drone *tmp);
-
+/*! 
+* Metoda odpowiedzialna za sprawdzanie czy można lądować
+*/
 bool canland(  Drone *tmp ) ;
+/*! 
+* Metoda odpowiedzialna za przekazanie środka pomocniczego
+*/
+void givebmid(Solid *tmp, Solid *tmp2);
 };

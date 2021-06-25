@@ -7,8 +7,7 @@
  * Plik zawiera definicję klasy Obstacles
  */
 
-//#include "matrix3x3.hh"
-//#include "vector3D.hh"
+
 #include "../inc/lacze_do_gnuplota.hh"
 
 
@@ -20,19 +19,10 @@
 class Obstacles { 
 public:
 
-    //int nr=0;
+    
     PzG::LaczeDoGNUPlota  &Lacze;
-    //std::string type="obiekt niezidentyfikowany";
-    //std:: string name;
-    //Vector3D mid;
-
     
 
-//virtual Vector3D getmid() /*const*/ {return mid;}
-
-//virtual std::string gettype() {return type;}
-
-//virtual std::string getname() {return name;}
 
 /*! 
 * Konstruktor parametryczny klasy Obstacles

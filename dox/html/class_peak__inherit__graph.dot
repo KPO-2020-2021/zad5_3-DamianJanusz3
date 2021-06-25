@@ -6,4 +6,6 @@ digraph "Peak"
   Node1 [label="Peak",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Solid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solid.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Obstacles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_obstacles.html",tooltip=" "];
 }
